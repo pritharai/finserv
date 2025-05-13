@@ -1,0 +1,122 @@
+import React from "react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { BsGooglePlay, BsApple } from "react-icons/bs";
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-gray-100 text-gray-800 px-10 py-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        {/* Logo and Description */}
+        <div>
+          <img src="/logo.png" alt="VSP Finserv" className="w-32 mb-4" />
+          <p className="text-sm">
+            We are an AMFI registered Mutual Fund Distribution company. We
+            specialise in Mutual Fund Distribution
+          </p>
+        </div>
+
+        {/* Useful Links */}
+        <div>
+          <h3 className="text-lg font-bold text-green-600 mb-2">
+            Useful Links
+          </h3>
+          <ul className="space-y-1 text-sm">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Calculators</li>
+            <li>Privacy Policy</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+
+        {/* Services */}
+        <div>
+          <h3 className="text-lg font-bold text-green-600 mb-2">Services</h3>
+          <ul className="space-y-1 text-sm">
+            <li>Financial Planning</li>
+            <li>Early Retirement</li>
+            <li>Risk Management</li>
+            <li>INS Planning</li>
+            <li>Tax Planning</li>
+            <li>NRI Corner</li>
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h3 className="text-lg font-bold text-green-600 mb-2">
+            Get In Touch
+          </h3>
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-center">
+              <FaPhoneAlt className="mr-2 text-green-500" />
+              9463984957
+            </li>
+            <li className="flex items-center">
+              <FaEnvelope className="mr-2 text-green-500" />
+              vspfinsserv@gmail.com
+            </li>
+            <li className="flex items-start">
+              <FaMapMarkerAlt className="mr-2 mt-1 text-green-500" />
+              Dhandhra road, Ludhiana. Pin 141113, Punjab
+            </li>
+          </ul>
+          <p className="text-green-600 font-semibold mt-4">
+            Download the app now
+          </p>
+          <div className="flex space-x-4 mt-2">
+            <button className="bg-black text-white px-3 py-2 rounded flex items-center space-x-2">
+              <BsGooglePlay />
+              <span>Google Play</span>
+            </button>
+            <button className="bg-black text-white px-3 py-2 rounded flex items-center space-x-2">
+              <BsApple />
+              <span>Apple Store</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Disclaimer */}
+      <div className="mt-10 items-center justify-center text-xs text-gray-600 max-w-7xl mx-auto space-y-2 ">
+        <p>
+          <strong>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consectetur, necessitatibus.
+          </strong>{" "}<br></br>
+          <strong>Disclaimer:</strong> Mutual fund investments are subject to market risks.
+          Please read the scheme information and other related documents
+          carefully before investing. Past performance is not indicative of
+          future returns. Please consider your specific investment requirements
+          before choosing a fund, or designing a portfolio that suits your
+          needs.
+        </p>
+        <p>
+          <strong>VSP Finserv</strong> makes no warranties or representations...
+          (etc.)
+        </p>
+
+        {/* Logos */}
+        <div className="flex items-center justify-center mt-4 space-x-6">
+          <img src="/amfi-logo.png" alt="AMFI" className="h-10" />
+          <div>
+            <p>AMFI Registered</p>
+            <p className="font-bold"></p>
+          </div>
+          <img
+            src="/mutualfunds-logo.png"
+            alt="Mutual Funds Sahi Hai"
+            className="h-10"
+          />
+        </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="text-center text-xs text-gray-500 mt-6 border-t pt-4">
+        Copyright © 2025 VSP Finserv. All Rights Reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
