@@ -1,118 +1,91 @@
 import React from "react";
+import { FaCertificate, FaBolt, FaUserCheck, FaMobileAlt } from "react-icons/fa";
 import profile from "../assets/profile.jpg";
-import mutualFund from "../assets/Mutual-Funds.webp"; // Add a related image
+import mf from "../assets/Mutual-Funds.webp";
 import insurance from "../assets/insurance.webp";
 import tech from "../assets/tech.jpg";
 import support from "../assets/support.jpg";
 
 const About: React.FC = () => {
+  const offerCards = [
+    { title: "Mutual Fund Planning", desc: "Goal-based investments aligned to your future needs.", img: mf },
+    { title: "Insurance Solutions", desc: "Custom coverage for life, health, and assets.", img: insurance },
+    { title: "Tech-Driven Tools", desc: "Smart dashboards, tracking, and automation.", img: tech },
+    { title: "Client-First Support", desc: "Always available with fast, friendly help.", img: support },
+  ];
+
+  const whyChoose = [
+    { icon: <FaCertificate size={30} />, label: "Certified Experts" },
+    { icon: <FaBolt size={30} />, label: "Fast & Efficient" },
+    { icon: <FaUserCheck size={30} />, label: "Trust & Transparency" },
+    { icon: <FaMobileAlt size={30} />, label: "Digital-First" },
+  ];
+
   return (
-    <div className="flex flex-col items-center px-4 py-12 bg-gradient-to-b from-gray-50 to-white">
-      {/* Heading */}
-      <h1 className="text-5xl font-extrabold mb-12 text-gray-700 text-center tracking-wide">
-        About Us
+    <div className="px-6 py-16 max-w-7xl mx-auto">
+
+      {/* Header */}
+      <h1 className="text-5xl font-light text-center text-gray-800 mb-20">
+        About <span className="font-semibold text-blue-600">VSP FinSserv</span>
       </h1>
 
-      {/* Intro Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl w-full">
-        {/* Paragraph */}
-        <div className="md:w-1/2 text-gray-800 text-lg leading-relaxed text-center md:text-left">
-          <p>
-            Welcome to <span className="font-semibold text-blue-700">VSP FinSserv</span>, where
-            financial expertise meets technological insight. As an <strong>AMFI Certified Mutual Fund Distributor</strong> and an <strong>IRDA Certified Insurance Advisor</strong>, we deliver secure and growth-focused financial solutions.
-          </p>
-          <p className="mt-4">
-            With a strong academic foundation in Computer Science (B.Tech) and MCA, we bring a modern,
-            data-driven approach to your financial planning. Our tech-savviness ensures you receive
-            efficient, transparent, and fully personalized investment strategies.
-          </p>
-        </div>
+      {/* Z-pattern Section */}
+      <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
+        <div className="text-lg text-gray-700 leading-7">
+          <p className="mb-4">
+          Welcome to VSP FinSserv, where financial expertise meets technological insight.
+As an AMFI Certified Mutual Fund Distributor and an IRDA Certified Insurance Advisor, we specialize in providing well-rounded financial solutions that combine the security of insurance with the growth potential of mutual fund investments. Backed by a strong academic foundation in Computer Science (B.Tech) and a Master’s in Computer Applications (MCA), we bring a modern, data-driven approach to financial planning.
+Our unique blend of financial knowledge and tech-savviness allows us to offer transparent, efficient, and customized investment and insurance solutions, powered by the latest tools and platforms.
 
-        {/* Image */}
-        <div className="md:w-1/2">
-          <img
-            src={profile}
-            alt="Our Team"
-            className="w-full rounded-xl shadow-xl border-4 border-gray-300"
-          />
+          </p>
+          <p>
+            Whether it’s investing for your goals or protecting your future, we simplify finance with clarity and confidence.
+          </p>
         </div>
+        <img src={profile} alt="Team" className="rounded-xl object-cover shadow-sm w-full h-auto" />
       </div>
 
       {/* What We Offer */}
-      <div className="mt-16 max-w-6xl w-full bg-white rounded-xl shadow-md p-10">
-        <h2 className="text-3xl font-semibold text-center mb-8 text-blue-800">
-          What We Offer
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Card 1 */}
-          <div className="flex flex-col md:flex-row bg-blue-50 rounded-lg shadow p-6 hover:shadow-lg transition">
-            <img src={mutualFund} alt="Mutual Fund" className="w-24 h-24 rounded-lg object-cover mr-6" />
-            <div>
-              <h3 className="font-bold text-xl mb-2">🎯 Goal-Based Mutual Fund Planning</h3>
-              <p>
-                Personalized investment plans for retirement, education, and more, tailored to your risk profile.
-              </p>
-            </div>
-          </div>
+      <h2 className="text-3xl font-semibold text-blue-700 mb-10 text-center">
+        What We Offer
+      </h2>
+      <div className="grid md:grid-cols-2 gap-10 mb-24">
+        {offerCards.map((card, i) => (
+          <div
+          key={i}
+          className="relative rounded-lg overflow-hidden h-60 shadow-lg hover:scale-[1.02] transition-all cursor-pointer"
+        >
+          {/* Background image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${card.img})` }}
+          />
+        
+          {/* Overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black to-black/20" />
 
-          {/* Card 2 */}
-          <div className="flex flex-col md:flex-row bg-blue-50 rounded-lg shadow p-6 hover:shadow-lg transition">
-            <img src={insurance} alt="Insurance" className="w-24 h-24 rounded-lg object-cover mr-6" />
-            <div>
-              <h3 className="font-bold text-xl mb-2">🛡️ Comprehensive Insurance Solutions</h3>
-              <p>
-                Life, health, and general insurance products designed to protect your financial well-being.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="flex flex-col md:flex-row bg-blue-50 rounded-lg shadow p-6 hover:shadow-lg transition">
-            <img src={tech} alt="Tech Driven" className="w-24 h-24 rounded-lg object-cover mr-6" />
-            <div>
-              <h3 className="font-bold text-xl mb-2">💻 Tech-Driven Financial Services</h3>
-              <p>
-                Digital tools for real-time tracking, faster service, and smoother portfolio management.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 4 */}
-          <div className="flex flex-col md:flex-row bg-blue-50 rounded-lg shadow p-6 hover:shadow-lg transition">
-            <img src={support} alt="Support" className="w-24 h-24 rounded-lg object-cover mr-6" />
-            <div>
-              <h3 className="font-bold text-xl mb-2">🤝 Client-First Philosophy</h3>
-              <p>
-                Long-term support with a focus on trust, transparency, and personalized attention.
-              </p>
-            </div>
+        
+          {/* Content */}
+          <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white">
+            <h3 className="text-2xl font-bold mb-2">{card.title}</h3>
+            <p className="text-sm">{card.desc}</p>
           </div>
         </div>
+        
+        ))}
       </div>
 
       {/* Why Choose Us */}
-      <div className="mt-16 max-w-6xl w-full bg-gradient-to-r from-blue-100 to-white rounded-xl shadow-md p-10">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-blue-800">Why Choose Us?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg text-gray-800">
-          <div className="p-4 bg-white rounded-md shadow hover:bg-blue-50 transition">
-            ✅ AMFI & IRDA Certified
+      <h2 className="text-3xl font-semibold text-blue-700 mb-10 text-center">
+        Why Choose Us
+      </h2>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center text-gray-700">
+        {whyChoose.map((item, i) => (
+          <div key={i} className="flex flex-col items-center space-y-2">
+            <div className="text-blue-600">{item.icon}</div>
+            <span className="text-md font-medium">{item.label}</span>
           </div>
-          <div className="p-4 bg-white rounded-md shadow hover:bg-blue-50 transition">
-            ✅ Transparent, ethical advice
-          </div>
-          <div className="p-4 bg-white rounded-md shadow hover:bg-blue-50 transition">
-            ✅ Technical expertise in digital platforms
-          </div>
-          <div className="p-4 bg-white rounded-md shadow hover:bg-blue-50 transition">
-            ✅ Personalized service with quick response time
-          </div>
-          <div className="p-4 bg-white rounded-md shadow hover:bg-blue-50 transition">
-            ✅ Continuous learning and up-to-date market knowledge
-          </div>
-        </div>
-        <p className="mt-6 text-center text-gray-700 text-lg leading-relaxed">
-          We’re not just your financial advisor—we’re your <strong>financial partner</strong>, helping you make smart, informed decisions in a digital-first world.
-        </p>
+        ))}
       </div>
     </div>
   );
