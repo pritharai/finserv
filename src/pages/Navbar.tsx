@@ -3,22 +3,28 @@ import React from "react";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-green-600 text-white p-8 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-3xl font-bold">
-          <Link to ="/">VSP FinsServ</Link></h1>
-        <ul className="flex text-xl space-x-10">
+    <nav className="bg-blue-800 text-white py-5 shadow-lg">
+      <div className="container mx-auto flex justify-between items-center px-4">
+        {/* Logo */}
+        <h1 className="text-3xl font-bold tracking-wide">
+          <Link to="/" className="hover:text-yellow-300 transition duration-200">
+            VSP FinsServ
+          </Link>
+        </h1>
+
+        {/* Nav Links */}
+        <ul className="flex text-lg space-x-8 font-medium">
           <li>
-            <Link to="/" className="hover:text-gray-300">Home</Link>
+            <Link to="/" className="hover:text-yellow-300 transition duration-200">Home</Link>
           </li>
           <li>
-            <Link to="/Aboutus" className="hover:text-gray-300">About</Link>
+            <Link to="/Aboutus" className="hover:text-yellow-300 transition duration-200">About</Link>
           </li>
           <li>
-            <Link to="/Contact" className="hover:text-gray-300">Contact</Link>
+            <Link to="/Contact" className="hover:text-yellow-300 transition duration-200">Contact</Link>
           </li>
           <li>
-            <Link to="/SipCalc" className="hover:text-gray-300">SIP Calculator</Link>
+            <Link to="/SipCalc" className="hover:text-yellow-300 transition duration-200">SIP Calculator</Link>
           </li>
         </ul>
       </div>
