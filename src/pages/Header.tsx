@@ -36,7 +36,7 @@ const Header: React.FC = () => {
       ))}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gray-700 opacity-60 z-20" />
+      <div className="absolute inset-0 bg-gray-800 opacity-70 z-20" />
 
       {/* Text Content */}
       <div className="absolute inset-0 z-30 flex flex-col justify-center items-start mx-16 py-8 text-white">

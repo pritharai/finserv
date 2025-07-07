@@ -1,7 +1,8 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { BsGooglePlay, BsApple } from "react-icons/bs";
-
+import amfi_logo from "../assets/amfi-logo.jpg"
+import mutualfunds from "../assets/mutualfunds.webp"
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-100 text-gray-800 px-10 py-12">
@@ -98,15 +99,15 @@ const Footer: React.FC = () => {
 
         {/* Logos */}
         <div className="flex items-center justify-center mt-4 space-x-6">
-          <img src="/amfi-logo.png" alt="AMFI" className="h-10" />
+          <img src={amfi_logo} alt="AMFI" className="h-20" />
           <div>
             <p>AMFI Registered</p>
             <p className="font-bold"></p>
           </div>
           <img
-            src="/mutualfunds-logo.png"
+            src={mutualfunds}
             alt="Mutual Funds Sahi Hai"
-            className="h-10"
+            className="h-20"
           />
         </div>
       </div>
