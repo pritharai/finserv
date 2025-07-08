@@ -5,6 +5,7 @@ import mf from "../assets/Mutual-Funds.webp";
 import insurance from "../assets/insurance.webp";
 import tech from "../assets/tech.jpg";
 import support from "../assets/support.jpg";
+import FaqSection from "../component/faq";
 
 const AboutUs = () => {
   const offerCards = [
@@ -22,6 +23,8 @@ const AboutUs = () => {
   ];
 
   return (
+    <>
+    
     <div className="px-6 py-16 max-w-7xl mx-auto">
 
       {/* Header */}
@@ -85,6 +88,8 @@ const AboutUs = () => {
         ))}
       </div>
     </div>
+    <FaqSection/>
+    </>
   );
 };
 

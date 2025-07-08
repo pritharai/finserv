@@ -4,6 +4,7 @@ import { BsGooglePlay, BsApple } from "react-icons/bs";
 import amfi_logo from "../assets/amfi-logo.jpg"
 import mutualfunds from "../assets/mutualfunds.webp"
 import logo from "../assets/logoo.png"; 
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-800 px-10 py-12">
@@ -23,11 +24,11 @@ const Footer = () => {
             Useful Links
           </h3>
           <ul className="space-y-1 text-sm">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Calculators</li>
-            <li>Privacy Policy</li>
-            <li>Contact Us</li>
+            <li><Link to="/" className="hover:text-yellow-30">Home</Link></li>
+            <li><Link to="/aboutus" className="hover:text-yellow-30">About Us</Link></li>
+            <li><Link to="/sip" className="hover:text-yellow-30">Calculators</Link></li>
+            <li><Link to="/" className="hover:text-yellow-30">Privacy Policy</Link></li>
+            <li><Link to="/contact" className="hover:text-yellow-30">Contact Us</Link></li>
           </ul>
         </div>
 

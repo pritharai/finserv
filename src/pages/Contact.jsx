@@ -1,5 +1,6 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import FaqSection from "../component/faq";
 
 const Contact = () => {
   return (
