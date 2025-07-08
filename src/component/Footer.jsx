@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { BsGooglePlay, BsApple } from "react-icons/bs";
 import amfi_logo from "../assets/amfi-logo.jpg"
 import mutualfunds from "../assets/mutualfunds.webp"
-import logo from "../assets/logo.png"; 
+import logo from "../assets/logoo.png"; 
 const Footer = () => {
   return (
     <footer className="bg-gray-100 text-gray-800 px-10 py-12">
