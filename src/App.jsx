@@ -5,6 +5,7 @@ import Contact from './pages/Contact'
 import AboutUs from './pages/AboutUs'
 import PageNotFound from './component/PageNotFound'
 import SIP from './pages/SIP'
+import MarketTicker from './component/MarketTicker'
 const App = () => {
   return (
     <Routes>
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='contact' element={<Contact />} />
         <Route path='aboutus' element={<AboutUs />} />
         <Route path='sip' element={<SIP />} />
+        <Route path='market' element={<MarketTicker />} />
       </Route>
       <Route path='*' element={<PageNotFound/>} />
     </Routes>

@@ -7,3 +7,5 @@ const MarketTicker = () => {
 }
 
 export default MarketTicker
+
+// Own Backend
