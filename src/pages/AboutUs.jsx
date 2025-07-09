@@ -25,7 +25,7 @@ const AboutUs = () => {
   return (
     <>
     
-    <div className="px-6 py-16 max-w-7xl mx-auto">
+    <div className="px-6 py-5 max-w-7xl mx-auto">
 
       {/* Header */}
       <h1 className="text-5xl font-light text-center text-gray-800 mb-20">
