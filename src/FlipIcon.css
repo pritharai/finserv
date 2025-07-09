@@ -1,0 +1,7 @@
+.icon-flip {
+  transition: transform 0.8s ease-in-out;
+}
+
+.icon-flip:hover {
+  transform: rotateY(360deg);
+}
