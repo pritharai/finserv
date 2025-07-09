@@ -5,6 +5,8 @@
   "homepage": "https://pritharai.github.io/finserv",
   "type": "module",
   "scripts": {
+    "build": "vite build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
