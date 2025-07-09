@@ -25,7 +25,7 @@ const Navbar = () => {
   }, [timeoutId]);
 
     return (
-        <nav className="bg-blue-800 text-white shadow-lg">
+        <nav className="bg-blue-800 text-white shadow-lg fixed top-0 z-50 left-0 right-0 mb-500">
             <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
                 {/* Logo */}
                 <h1 className="text-2xl font-bold tracking-wide">

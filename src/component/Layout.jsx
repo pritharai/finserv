@@ -5,7 +5,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <main className='p-[1rem]'>
+      <main className='p-[1rem] mt-20'>
         <Outlet />
       </main>
       <Footer />
