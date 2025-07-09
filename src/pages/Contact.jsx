@@ -4,7 +4,7 @@ import FaqSection from "../component/faq";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-12">
+    <div className="min-h-screen bg-gray-50 px-6 py-5">
       <div className="max-w-5xl mx-auto bg-white p-10 rounded-md shadow-md">
         <h1 className="text-3xl font-bold text-center text-green-700 mb-6">
           Contact Us
