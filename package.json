@@ -17,6 +17,7 @@
     "aos": "^2.3.4",
     "axios": "^1.10.0",
     "chart.js": "^4.5.0",
+    "firebase": "^11.10.0",
     "framer-motion": "^12.23.3",
     "html2canvas": "^1.4.1",
     "jspdf": "^3.0.1",
