@@ -3,11 +3,13 @@ import { Button } from "@mui/material";
 import coins from "../assets/4.jpg";
 import coins2 from "../assets/couple2.jpg"; 
 import coins3 from "../assets/family.jpg";
+import { useNavigate } from "react-router-dom";
 
 const images = [coins, coins2, coins3];
 
 const Header = () => {
   const [current, setCurrent] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -44,7 +46,8 @@ const Header = () => {
           Empowering your financial future with trust and transparency.
         </p>
         <div className="flex space-x-4 px-5">
-          <Button variant="contained" color="primary" sx={{ mr: 2 }}>
+          <Button variant="contained" color="primary" sx={{ mr: 2 }} 
+          onClick={() => navigate("/contact")}>
             Contact Us
           </Button>
           <Button
@@ -52,7 +55,7 @@ const Header = () => {
             color="inherit"
             sx={{ borderColor: "white", color: "white" }}
           >
-            See Policies
+            Our Partners
           </Button>
         </div>
       </div>

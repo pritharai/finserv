@@ -26,7 +26,7 @@ const points = [
 ];
 
 const ChooseUsCard = () => {
-    const cardRefs = useRef([]);
+  const cardRefs = useRef([]);
   const [readCards, setReadCards] = useState([]);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const ChooseUsCard = () => {
         if (el && !readCards.includes(index)) {
           const rect = el.getBoundingClientRect();
           const elementCenter = rect.top + rect.height / 2;
-          const screenCenter = window.innerHeight / 2;
+          const screenCenter = window.innerHeight / 1.3;
 
           if (elementCenter < screenCenter) {
             setReadCards((prev) => [...prev, index]);
@@ -45,67 +45,63 @@ const ChooseUsCard = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Trigger on mount
+    handleScroll(); // Initial check
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, [readCards]);
 
   return (
-    <div className="flex flex-col items-center justify-center py-12 px-6 bg-gray-50">
-      <h1 className="text-4xl font-bold text-gray-800 text-center mb-6">
-        Why Choose Us?
-      </h1>
-      <p className="text-lg text-center text-gray-600 max-w-2xl mb-10">
-        We provide tailored solutions, expert financial advice, and a commitment
-        to your long-term success. Experience reliability and innovation like
-        never before.
-      </p>
+    <section className="py-15 px-6 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="max-w-7xl mx-auto text-center mb-12">
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">Why VSP?</h2>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          We provide tailored solutions, expert financial advice, and a commitment
+          to your long-term success. Experience reliability and innovation like never before.
+        </p>
+      </div>
 
-      <div className="flex flex-col-reverse lg:flex-row items-center gap-10 max-w-6xl w-full">
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-12 max-w-7xl mx-auto">
         {/* Points List */}
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 grid gap-6">
           {points.map((point, index) => (
             <div
               key={index}
               ref={(el) => (cardRefs.current[index] = el)}
-              className={`flex items-start gap-4 rounded-lg p-4 transition-all duration-500 shadow-md ${
-                readCards.includes(index)
-                  ? "bg-gray-300 text-gray-800"
-                  : "bg-white"
-              }`}
-            >
-              <FaCheckCircle
-                className={`text-2xl mt-1 transition-colors duration-300 ${
+              className={`group transition-all duration-700 ease-in-out transform rounded-xl p-6 border-l-4 shadow-md hover:shadow-lg hover:scale-[1.02] bg-white 
+                ${
                   readCards.includes(index)
-                    ? "text-gray-700"
-                    : "text-gray-400"
+                    ? "border-green-500 bg-gradient-to-r from-green-100 to-white"
+                    : "border-gray-300"
                 }`}
-              />
-              <div>
-                <h3 className="text-xl font-semibold">{point.title}</h3>
-                <p className="text-gray-700">{point.description}</p>
+            >
+              <div className="flex items-start gap-4">
+                <FaCheckCircle
+                  className={`text-2xl mt-1 transition-colors duration-300 ${
+                    readCards.includes(index)
+                      ? "text-green-600"
+                      : "text-gray-400"
+                  }`}
+                />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">{point.title}</h3>
+                  <p className="text-gray-600 mt-1">{point.description}</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Image */}
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex justify-center items-center">
           <img
-            className="h-130 w-full max-w-sm rounded-lg shadow-lg"
+            className="rounded-xl shadow-2xl w-full max-w-sm transform transition-transform duration-700 hover:scale-105"
             src={sale1}
             alt="Why Choose Us"
           />
         </div>
       </div>
-    </div>
+    </section>
   );
+};
 
-}
-
-export default ChooseUsCard
-
-
-
-
-
+export default ChooseUsCard;

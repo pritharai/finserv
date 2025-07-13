@@ -2,14 +2,14 @@ import Couple3 from "../assets/couple3.avif";
 import { Button } from "@mui/material";
 
 const About = () => {
-   return (
-    <div className="bg-white card flex items-center justify-between h-auto w-full px-20 py-12">
+  return (
+    <div className="bg-white flex flex-col lg:flex-row items-center justify-between w-full px-6 sm:px-10 lg:px-20 py-12">
       {/* Text Section */}
-      <div className="flex-1 mr-10">
-        <h1 className="text-4xl font-bold mb-6 text-gray-700">
+      <div className="flex-1 mb-10 lg:mb-0 lg:mr-10">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-700">
           Know Your Policies
         </h1>
-        <p className="text-xl mb-10 text-gray-600">
+        <p className="text-base sm:text-lg mb-8 text-gray-600 leading-relaxed">
           At VSP FinSserv, we believe that financial well-being is the
           foundation of a secure and happy life. As a trusted provider of mutual
           fund investment & insurance solutions, our mission is to empower
@@ -27,15 +27,15 @@ const About = () => {
       </div>
 
       {/* Image Section */}
-      <div className="flex-1">
+      <div className="flex-1 w-full">
         <img
-          className="w-full h-100 object-cover rounded-md mt-20"
+          className="w-full h-auto object-cover rounded-md"
           src={Couple3}
           alt="Happy Couple"
         />
       </div>
     </div>
   );
-}
+};
 
-export default About
+export default About;

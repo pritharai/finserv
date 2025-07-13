@@ -64,19 +64,7 @@ const Footer = () => {
               Dhandhra road, Ludhiana. Pin 141113, Punjab
             </li>
           </ul>
-          <p className="text-green-600 font-semibold mt-4">
-            Download the app now
-          </p>
-          <div className="flex space-x-4 mt-2">
-            <button className="bg-black text-white px-3 py-2 rounded flex items-center space-x-2">
-              <BsGooglePlay />
-              <span>Google Play</span>
-            </button>
-            <button className="bg-black text-white px-3 py-2 rounded flex items-center space-x-2">
-              <BsApple />
-              <span>Apple Store</span>
-            </button>
-          </div>
+          
         </div>
       </div>
 
