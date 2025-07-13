@@ -54,6 +54,7 @@ const Header = () => {
             variant="outlined"
             color="inherit"
             sx={{ borderColor: "white", color: "white" }}
+            onClick={() => navigate("/partners")}
           >
             Our Partners
           </Button>

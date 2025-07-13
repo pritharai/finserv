@@ -5,6 +5,9 @@ import licLogo from "../assets/logos/lic.jpg";
 import helios from "../assets/logos/helios.png";
 import bandhan from "../assets/logos/bandhan.jpg";
 import motilal from "../assets/logos/motilal.png"
+import invesco from "../assets/logos/invesco.jpg";
+import canara from "../assets/logos/canara.png";
+import mahindra from "../assets/logos/mahindra.png"
 import hdfc from "../assets/logos/hdfc.png";
 import tata from "../assets/logos/tata.png";
 import union from "../assets/logos/union.png";
@@ -18,9 +21,12 @@ const partners = [
   { name: "Helios Mutual Fund", logo: helios, link: "https://cams.co.in/3h31dZGB5e5" },
   { name: "Bandhan Mutual Fund", logo: bandhan, link: "#" },
   { name: "Motilal Oswal", logo: motilal, link: "#" },
-  { name: "HDFC Mutual Fund", logo: hdfc, link: "https://cams.co.in/2STkw8mk83s" },
+  { name: "Invesco Mutual Fund", logo: invesco, link: "#" },
+  { name: "Mahindra Manulife", logo: mahindra, link: "#" },
+  { name: "Canara Robeco", logo: canara, link: "#" },
   { name: "TATA Mutual Fund", logo: tata, link: "https://cams.co.in/72FhrtpEgpk" },
   { name: "Union Mutual Fund", logo: union, link: "https://cams.co.in/7ukl0LQJLL9" },
+  { name: "HDFC Mutual Fund", logo: hdfc, link: "https://cams.co.in/2STkw8mk83s" },
   { name: "SBI Mutual Fund", logo: sbi, link: "#" },
   { name: "Axis Mutual Fund", logo: axis, link: "https://mfs.kfintech.com/NFORegistration?refId=ODI1NTA1" },
   // Add as many as needed...

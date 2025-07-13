@@ -1,10 +1,13 @@
 import React from "react";
-import achievementImage from "../assets/family.jpg"; // replace with your actual image path
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+import achievementImage from "../assets/achievements.avif";
 
 const AchievementsSection = () => {
+  const { ref: counterRef, inView } = useInView({ triggerOnce: true });
+
   return (
     <section className="relative bg-white-500 pt-16 pb-36 px-6">
-
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
         {/* Left: Image */}
         <div className="relative z-10">
@@ -44,20 +47,23 @@ const AchievementsSection = () => {
       </div>
 
       {/* Stats Box */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 w-[90%] md:w-[70%] bg-yellow-400 text-white rounded-xl shadow-xl py-10 px-6 grid grid-cols-2 md:grid-cols-2 justify-between text-center z-20">
+      <div
+        ref={counterRef}
+        className="absolute left-1/2 transform -translate-x-1/2 w-[90%] md:w-[70%] bg-yellow-400 text-white rounded-xl shadow-xl py-10 px-6 grid grid-cols-2 md:grid-cols-2 justify-between text-center z-20"
+      >
         <div>
-          <h3 className="text-4xl font-extrabold">424+</h3>
+          <h3 className="text-4xl font-extrabold">
+            {inView ? <CountUp end={424} duration={3} /> : 0}+
+          </h3>
           <p className="font-medium">Investors</p>
         </div>
         <div>
-          <h3 className="text-4xl font-extrabold">120+</h3>
+          <h3 className="text-4xl font-extrabold">
+            {inView ? <CountUp end={120} duration={3} /> : 0}+
+          </h3>
           <p className="font-medium">Happy Families</p>
         </div>
       </div>
-
-      {/* Background Decorations (optional) */}
-      {/* <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-pink-400 to-orange-400 rounded-full opacity-30 blur-3xl animate-pulse -z-10" />
-      <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-br from-purple-500 to-pink-400 rounded-full opacity-30 blur-3xl animate-pulse -z-10" /> */}
     </section>
   );
 };
