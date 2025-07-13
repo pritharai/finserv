@@ -185,7 +185,7 @@ y += 10;
 
   return (
     <div className="max-w-6xl mx-auto p-6 md:p-10 bg-white rounded-xl shadow-lg m-10">
-  <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+  <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
     SWP Calculator
   </h2>
 

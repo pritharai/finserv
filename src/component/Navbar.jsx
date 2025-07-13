@@ -67,7 +67,7 @@ const Navbar = () => {
                         </div>
                     </li>
 
-                    <li><Link to="/sip" className="hover:text-yellow-300">SIP Calculator</Link></li>
+                    <li><Link to="/calculator" className="hover:text-yellow-300">Calculators</Link></li>
                     <li><Link to="/mfforms" className="hover:text-yellow-300">MF Forms</Link></li>
                 </ul>
             </div>
@@ -90,7 +90,7 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <Link to="/sip" className="block hover:text-yellow-300">SIP Calculator</Link>
+                    <Link to="/calculator" className="block hover:text-yellow-300">Calculator</Link>
                     <Link to="/mfforms" className="hover:text-yellow-300">MF Forms</Link>
                 </div>
             )}

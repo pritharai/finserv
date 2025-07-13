@@ -1,4 +1,5 @@
 import {Routes, Route} from 'react-router-dom'
+import React, { useEffect } from 'react'
 import  Layout from './component/Layout'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
@@ -14,10 +15,19 @@ import ChildMarriageCalculator from './component/childMarriage'
 import RetirementCalculator from './component/RetirementCalc'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import ChildEducationCalculator from './component/childEducation'
+import FinancialPlanning from './component/FinancialPlanning'
 
 
 
 const App = () => {
+
+  useEffect(() => {
+  AOS.init({ duration: 1000, once: true });
+}, []);
+
   return (
     <>
     <Routes>
@@ -33,6 +43,8 @@ const App = () => {
         <Route path='calculator' element={<Calculator/>}/>
         <Route path='childmarriagecalc' element={<ChildMarriageCalculator/>}/>
         <Route path='retirementcalc' element={<RetirementCalculator/>}/>
+        <Route path='childeducationcalc' element={<ChildEducationCalculator/>}/>
+        <Route path='financial-planning' element={<FinancialPlanning/>}/>
       </Route>
       
       <Route path='*' element={<PageNotFound/>} />

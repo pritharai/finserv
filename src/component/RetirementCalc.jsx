@@ -33,7 +33,7 @@ const RetirementCalculator = () => {
 
   return (
     <div className="bg-white shadow-md rounded-lg p-6 max-w-3xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
+      <h2 className="text-3xl font-bold mb-6 text-center text-blue-900">
         Retirement Planning Calculator
       </h2>
 

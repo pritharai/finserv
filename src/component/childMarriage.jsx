@@ -17,7 +17,7 @@ const ChildMarriageCalculator = () => {
 
   return (
     <div className="bg-white rounded shadow p-6 max-w-xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-4 text-center text-gray-800">
+      <h2 className="text-3xl font-bold mb-4 text-center text-blue-900">
         Child Marriage Planning Calculator
       </h2>
 
@@ -28,7 +28,7 @@ const ChildMarriageCalculator = () => {
             type="number"
             value={currentCost}
             onChange={(e) => setCurrentCost(+e.target.value)}
-            className="input"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
 
@@ -38,7 +38,7 @@ const ChildMarriageCalculator = () => {
             type="number"
             value={yearsLeft}
             onChange={(e) => setYearsLeft(+e.target.value)}
-            className="input"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
 
@@ -48,7 +48,7 @@ const ChildMarriageCalculator = () => {
             type="number"
             value={inflation}
             onChange={(e) => setInflation(+e.target.value)}
-            className="input"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
 
@@ -58,7 +58,7 @@ const ChildMarriageCalculator = () => {
             type="number"
             value={expectedReturn}
             onChange={(e) => setExpectedReturn(+e.target.value)}
-            className="input"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>
       </div>
