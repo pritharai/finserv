@@ -7,9 +7,9 @@ const Social = () => {
       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="block bg-blue-600 p-2 rounded-l hover:bg-blue-700 text-white">
         <FaFacebookF />
       </a>
-      <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="block bg-black p-2 rounded-l hover:bg-gray-900 text-white">
+      {/* <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="block bg-black p-2 rounded-l hover:bg-gray-900 text-white">
         <FaXTwitter />
-      </a>
+      </a> */}
       <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="block bg-pink-500 p-2 rounded-l hover:bg-pink-600 text-white">
         <FaInstagram />
       </a>
