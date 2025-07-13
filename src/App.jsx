@@ -8,8 +8,18 @@ import SIP from './component/SIP'
 import MarketTicker from './component/MarketTicker'
 import PartnersPage from './pages/Partners'
 import MutualFundFormsPage from './pages/MFforms'
+import SWPCalculator from './component/SWPCalculator'
+import Calculator from './pages/Calculator'
+import ChildMarriageCalculator from './component/childMarriage'
+import RetirementCalculator from './component/RetirementCalc'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 const App = () => {
   return (
+    <>
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
@@ -19,9 +29,16 @@ const App = () => {
         <Route path='market' element={<MarketTicker />} />
         <Route path='partners' element={<PartnersPage/>}/>
         <Route path='mfforms' element={<MutualFundFormsPage/>}/>
+        <Route path='swpcalculator' element={<SWPCalculator/>}/>
+        <Route path='calculator' element={<Calculator/>}/>
+        <Route path='childmarriagecalc' element={<ChildMarriageCalculator/>}/>
+        <Route path='retirementcalc' element={<RetirementCalculator/>}/>
       </Route>
+      
       <Route path='*' element={<PageNotFound/>} />
     </Routes>
+    <ToastContainer />
+    </>
   )
 }
 

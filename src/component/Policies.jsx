@@ -42,23 +42,26 @@ const PartnersSection = () => {
         <h1 className="text-3xl font-bold text-gray-900 mt-2">Our Partners</h1>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-        {partners.map((partner, index) => (
-          <a
-            key={index}
-            href={partner.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white rounded-lg p-4 shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 hover:scale-105 duration-300 flex items-center justify-center"
-          >
-            <img
-              src={partner.logo}
-              alt={partner.name}
-              className="max-h-24 object-contain"
-            />
-          </a>
-        ))}
-      </div>
+      <div className="marquee-container mt-10 bg-white py-4 rounded shadow-inner">
+  <div className="marquee-track space-x-10 items-center">
+    {[...partners, ...partners].map((partner, index) => (
+      <a
+        key={index}
+        href={partner.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-white p-3 shadow rounded-md min-w-[160px] h-24 flex items-center justify-center hover:scale-105 transform transition"
+      >
+        <img
+          src={partner.logo}
+          alt={partner.name}
+          className="max-h-16 object-contain"
+        />
+      </a>
+    ))}
+  </div>
+</div>
+
 
       {/* Explore More Link */}
       <div className="mt-10 text-center">

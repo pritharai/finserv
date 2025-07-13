@@ -73,6 +73,19 @@ const Contact = () => {
             </button>
           </form>
         </div>
+
+        <div className="mt-10 rounded overflow-hidden shadow-md">
+  <iframe
+    title="Office Location"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39638.77448349268!2d75.80830354622535!3d30.865287311834713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83dbc0e176fd%3A0x304ecc00270803d0!2sDhandra%20road!5e1!3m2!1sen!2sin!4v1752405640260!5m2!1sen!2sin"
+    width="100%"
+    height="300"
+    allowFullScreen=""
+    loading="lazy"
+    className="w-full border-none"
+  ></iframe>
+</div>
+
       </div>
     </div>
   );

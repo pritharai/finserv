@@ -12,6 +12,11 @@ import tata from "../assets/logos/tata.png";
 import union from "../assets/logos/union.png";
 import sbi from "../assets/logos/sbi.jpeg";
 import axis from "../assets/logos/axis.png";
+import nivabupa from "../assets/logos/niva-bupa.png";
+import hdfcergo from "../assets/logos/HDFC-ERGO.png";
+import manipal from "../assets/logos/manipal-cigna.png";
+import bajajall from "../assets/logos/Bajaj-Allianz.png";
+import tnia from "../assets/logos/TNIA.png"
 
 // Add more logos as needed...
 
@@ -77,6 +82,36 @@ const partners = [
     type: "Investment",
   },
   // Add insurance partners below similarly if needed
+  {
+    name: "Niva Bupa Health Insurance",
+    logo: nivabupa,
+    link: "https://www.axismf.com/",
+    type: "Health Insurance",
+  },
+  {
+    name: "ManipalCigna Health Insurance",
+    logo: manipal,
+    link: "https://www.axismf.com/",
+    type: "Health Insurance",
+  },
+  {
+    name: "The New India Assurance",
+    logo: tnia,
+    link: "https://www.axismf.com/",
+    type: "Motor Insurance",
+  },
+  {
+    name: "HDFC ERGO",
+    logo: hdfcergo,
+    link: "https://www.axismf.com/",
+    type: "Motor Insurance",
+  },
+  {
+    name: "Bajaj Allianz",
+    logo: bajajall,
+    link: "https://www.axismf.com/",
+    type: "Motor Insurance",
+  },
 ];
 
 const PartnersPage = () => {

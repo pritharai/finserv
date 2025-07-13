@@ -8,6 +8,7 @@ import Approach from '../component/Approach'
 import Objective from '../component/Objective'
 import PartnersSection from '../component/Policies'
 import AchievementsSection from '../component/achievements'
+import Testimonials from '../component/Testimonials'
 const Home = () => {
   return (
     <>
@@ -17,6 +18,7 @@ const Home = () => {
       <AchievementsSection/>
       <ChooseUsCard/>
       <Approach/>
+      <Testimonials/>
       <PartnersSection/>
       <Social/>
     </>
