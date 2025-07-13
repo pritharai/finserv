@@ -4,6 +4,8 @@ import SWPCalculator from "../component/SWPCalculator";
 import ChildMarriageCalculator from "../component/childMarriage";
 import RetirementCalculator from "../component/RetirementCalc";
 import ChildEducationCalculator from "../component/childEducation";
+import ElssCalculator from "../component/ELSSCalculator";
+import ElssCalcBox from "../component/ELSSCalcbox";
 // import LumpsumCalculator from "../component/LumpsumCalculator"; // if needed
 
 const Calculator = () => {
@@ -21,6 +23,8 @@ const Calculator = () => {
         return <RetirementCalculator />;
       case "Child Education Planning":
         return <ChildEducationCalculator />;
+      case "ELSS Calculator":
+        return <ElssCalcBox />;
       default:
         return null;
     }
@@ -34,7 +38,7 @@ const Calculator = () => {
 
       {/* Tab Buttons */}
       <div className="flex justify-center space-x-4 mb-8">
-        {["SIP", "SWP" , "Child Marriage", "Retirement Planning", "Child Education Planning"].map((type) => (
+        {["SIP", "SWP" , "Child Marriage", "Retirement Planning", "Child Education Planning", "ELSS Calculator"].map((type) => (
           <button
             key={type}
             onClick={() => setSelected(type)}

@@ -58,10 +58,12 @@ const Navbar = () => {
                             </button>
                             {dropdownOpen && (
                                 <ul className="absolute top-10 left-0 bg-white text-gray-800 rounded-md shadow-md py-2 w-48 z-50">
+                                    <li><Link to="/mutual-funds" className="block px-4 py-2 hover:bg-gray-100">Mutual Funds</Link></li>
+                                    <li><Link to="/insurance" className="block px-4 py-2 hover:bg-gray-100">Insurance</Link></li>
                                     <li><Link to="/financial-planning" className="block px-4 py-2 hover:bg-gray-100">Financial Planning</Link></li>
                                     <li><Link to="/taxplan" className="block px-4 py-2 hover:bg-gray-100">Tax Planning</Link></li>
                                     <li><Link to="/risk-management" className="block px-4 py-2 hover:bg-gray-100">Risk Management</Link></li>
-                                    <li><Link to="/nri-services" className="block px-4 py-2 hover:bg-gray-100">NRI Services</Link></li>
+                                    {/* <li><Link to="/nri-services" className="block px-4 py-2 hover:bg-gray-100">NRI Services</Link></li> */}
                                     <li><Link to="/premium" className="block px-4 py-2 hover:bg-gray-100">Pay Premium Online</Link></li>
                                 </ul>
                             )}
@@ -69,7 +71,7 @@ const Navbar = () => {
                     </li>
 
                     <li><Link to="/calculator" className="hover:text-yellow-300">Calculators</Link></li>
-                    <li><Link to="/mfforms" className="hover:text-yellow-300">MF Forms</Link></li>
+                    <li><Link to="/mutual-fund-forms" className="hover:text-yellow-300">MF Forms</Link></li>
                 </ul>
             </div>
 
@@ -84,15 +86,19 @@ const Navbar = () => {
                     <div>
                         <p className="font-semibold mt-2">Services</p>
                         <ul className="ml-4 space-y-2">
+                            <li><Link to="/mutual-funds" className="block px-4 py-2 hover:bg-gray-100">Mutual Funds</Link></li>
+                            <li><Link to="/insurance" className="block px-4 py-2 hover:bg-gray-100">Insurance</Link></li>
                             <li><Link to="/financial-planning" className="block hover:text-yellow-300">Financial Planning</Link></li>
                             <li><Link to="/taxplan" className="block hover:text-yellow-300">Tax Planning</Link></li>
                             <li><Link to="/risk-management" className="block hover:text-yellow-300">Risk Management</Link></li>
-                            <li><Link to="/nri-services" className="block hover:text-yellow-300">NRI Services</Link></li>
+                            <li><Link to="/premium" className="block px-4 py-2 hover:bg-gray-100">Pay Premium Online</Link></li>
+                           
+                            {/* <li><Link to="/nri-services" className="block hover:text-yellow-300">NRI Services</Link></li> */}
                         </ul>
                     </div>
 
                     <Link to="/calculator" className="block hover:text-yellow-300">Calculator</Link>
-                    <Link to="/mfforms" className="hover:text-yellow-300">MF Forms</Link>
+                    <Link to="/mutual-fund-forms" className="hover:text-yellow-300">MF Forms</Link>
                 </div>
             )}
         </nav>

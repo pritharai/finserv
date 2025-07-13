@@ -23,6 +23,8 @@ import PayPremium from './component/premium'
 import TaxPlanning from './component/TaxPlanning'
 import ElssCalculator from './component/ELSSCalculator'
 import RiskManagement from './component/Riskmanagement'
+import MutualFunds from './component/MutualFunds'
+import InsurancePage from './component/insurance'
 
 
 
@@ -42,7 +44,7 @@ const App = () => {
         <Route path='sip' element={<SIP />} />
         <Route path='market' element={<MarketTicker />} />
         <Route path='partners' element={<PartnersPage/>}/>
-        <Route path='mfforms' element={<MutualFundFormsPage/>}/>
+        <Route path='mutual-fund-forms' element={<MutualFundFormsPage/>}/>
         <Route path='swpcalculator' element={<SWPCalculator/>}/>
         <Route path='calculator' element={<Calculator/>}/>
         <Route path='childmarriagecalc' element={<ChildMarriageCalculator/>}/>
@@ -53,6 +55,8 @@ const App = () => {
         <Route path='taxplan' element={<TaxPlanning/>}/>
         <Route path='elsscalculator' element={<ElssCalculator/>}/>
         <Route path='risk-management' element={<RiskManagement/>}/>
+        <Route path='mutual-funds' element={<MutualFunds/>}/>
+        <Route path='insurance' element={<InsurancePage/>}/>        
       </Route>
       
       <Route path='*' element={<PageNotFound/>} />
