@@ -62,6 +62,7 @@ const Navbar = () => {
                                     <li><Link to="/tax-planning" className="block px-4 py-2 hover:bg-gray-100">Tax Planning</Link></li>
                                     <li><Link to="/risk-management" className="block px-4 py-2 hover:bg-gray-100">Risk Management</Link></li>
                                     <li><Link to="/nri-services" className="block px-4 py-2 hover:bg-gray-100">NRI Services</Link></li>
+                                    <li><Link to="/premium" className="block px-4 py-2 hover:bg-gray-100">Pay Premium Online</Link></li>
                                 </ul>
                             )}
                         </div>

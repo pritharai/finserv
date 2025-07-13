@@ -19,6 +19,7 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import ChildEducationCalculator from './component/childEducation'
 import FinancialPlanning from './component/FinancialPlanning'
+import PayPremium from './component/premium'
 
 
 
@@ -45,6 +46,7 @@ const App = () => {
         <Route path='retirementcalc' element={<RetirementCalculator/>}/>
         <Route path='childeducationcalc' element={<ChildEducationCalculator/>}/>
         <Route path='financial-planning' element={<FinancialPlanning/>}/>
+        <Route path='premium' element={<PayPremium/>}/>
       </Route>
       
       <Route path='*' element={<PageNotFound/>} />
