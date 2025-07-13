@@ -59,7 +59,7 @@ const Navbar = () => {
                             {dropdownOpen && (
                                 <ul className="absolute top-10 left-0 bg-white text-gray-800 rounded-md shadow-md py-2 w-48 z-50">
                                     <li><Link to="/financial-planning" className="block px-4 py-2 hover:bg-gray-100">Financial Planning</Link></li>
-                                    <li><Link to="/tax-planning" className="block px-4 py-2 hover:bg-gray-100">Tax Planning</Link></li>
+                                    <li><Link to="/taxplan" className="block px-4 py-2 hover:bg-gray-100">Tax Planning</Link></li>
                                     <li><Link to="/risk-management" className="block px-4 py-2 hover:bg-gray-100">Risk Management</Link></li>
                                     <li><Link to="/nri-services" className="block px-4 py-2 hover:bg-gray-100">NRI Services</Link></li>
                                     <li><Link to="/premium" className="block px-4 py-2 hover:bg-gray-100">Pay Premium Online</Link></li>
@@ -85,7 +85,7 @@ const Navbar = () => {
                         <p className="font-semibold mt-2">Services</p>
                         <ul className="ml-4 space-y-2">
                             <li><Link to="/financial-planning" className="block hover:text-yellow-300">Financial Planning</Link></li>
-                            <li><Link to="/tax-planning" className="block hover:text-yellow-300">Tax Planning</Link></li>
+                            <li><Link to="/taxplan" className="block hover:text-yellow-300">Tax Planning</Link></li>
                             <li><Link to="/risk-management" className="block hover:text-yellow-300">Risk Management</Link></li>
                             <li><Link to="/nri-services" className="block hover:text-yellow-300">NRI Services</Link></li>
                         </ul>
