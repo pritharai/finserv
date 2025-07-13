@@ -22,6 +22,7 @@ import FinancialPlanning from './component/FinancialPlanning'
 import PayPremium from './component/premium'
 import TaxPlanning from './component/TaxPlanning'
 import ElssCalculator from './component/ELSSCalculator'
+import RiskManagement from './component/Riskmanagement'
 
 
 
@@ -51,6 +52,7 @@ const App = () => {
         <Route path='premium' element={<PayPremium/>}/>
         <Route path='taxplan' element={<TaxPlanning/>}/>
         <Route path='elsscalculator' element={<ElssCalculator/>}/>
+        <Route path='risk-management' element={<RiskManagement/>}/>
       </Route>
       
       <Route path='*' element={<PageNotFound/>} />
