@@ -3,16 +3,76 @@ import { FaDownload, FaExternalLinkAlt } from "react-icons/fa";
 
 const onlineForms = [
   {
-    name: "SBI CAF",
-    link: "https://www.sbimf.com/en-us/investor-center",
+    name: "ITI CAF",
+    link: "https://mfs.kfintech.com/ITIConfirmation/investorservices/onlinepurchase/mobilepurchaseconfirmation1.aspx?Mob=TkZP&qparam=NzA1Nzgz&InvDistflag=VwAA&Trtype=U0lO",
+  },
+  {
+    name: "LIC CAF",
+    link: "https://online.licmf.com/QuickInvest?QWdlbnQ9QVJOLTE1MzE1NSZFdWluPUUyNzE4OTQmU3R5cGU9UmVndWxhciZmcm9tPW1hcmtldGluZw==",
+  },
+  {
+    name: "Helios CAF",
+    link: "https://cams.co.in/3h31dZGB5e5",
+  },
+  {
+    name: "Bajaj-Finserv CAF",
+    link: "https://mfs.kfintech.com/NFORegistration?refId=ODI1NTA1",
+  },
+//   {
+//     name: "Mahindra Manulife CAF",
+//     link: "https://cams.co.in/72FhrtpEgpk",
+//   },
+//   {
+//     name: "Canera Robeco CAF",
+//     link: "https://cams.co.in/72FhrtpEgpk",
+//   },
+  {
+    name: "TATA CAF",
+    link: "https://cams.co.in/72FhrtpEgpk",
+  },
+  {
+    name: "Union CAF",
+    link: "https://cams.co.in/7ukl0LQJLL9",
   },
   {
     name: "HDFC CAF",
     link: "https://cams.co.in/2STkw8mk83s",
   },
   {
-    name: "TATA CAF",
-    link: "https://cams.co.in/72FhrtpEgpk",
+    name: "HSBC CAF",
+    link: "https://cams.co.in/5qKPCpb0L5M",
+  },
+//   {
+//     name: "SBI CAF",
+//     link: "https://cams.co.in/72FhrtpEgpk",
+//   },
+//   {
+//     name: "UTI CAF",
+//     link: "https://cams.co.in/72FhrtpEgpk",
+//   },
+//   {
+//     name: "Axis CAF",
+//     link: "https://cams.co.in/72FhrtpEgpk",
+//   },
+//   {
+//     name: "Sundram CAF",
+//     link: "https://cams.co.in/72FhrtpEgpk",
+//   },
+//   {
+//     name: "Trust CAF",
+//     link: "https://cams.co.in/72FhrtpEgpk",
+//   },
+  {
+    name: "Samco CAF",
+    link: "https://www.samcomf.com/d/scheme/all/153155/E271894",
+  },
+//   {
+//     name: "Nippon CAF",
+//     link: "https://cams.co.in/72FhrtpEgpk",
+//   },
+  {
+    name: "DSP CAF",
+    link: "https://cams.co.in/8DzPvehrfWe",
   },
   // Add more...
 ];
