@@ -115,8 +115,8 @@ const AboutUs = () => {
         <h2 className="text-4xl font-bold text-center text-blue-800 mb-10">
           What Sets Us Apart?
         </h2>
-        <div
-  className="grid grid-cols-2 sm:grid-cols-4 gap-10 text-center text-gray-700"
+       <div
+  className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center text-gray-700"
   data-aos="fade-up"
 >
   {whyChoose.map((item, i) => (
@@ -124,25 +124,37 @@ const AboutUs = () => {
       key={i}
       data-aos="fade-up"
       data-aos-delay={i * 100}
-      className="group [perspective:1000px]"
+      className="group"
     >
-      <div className="relative h-50 w-full transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
-        {/* Front Side */}
-        <div className="absolute inset-0 bg-white rounded-xl shadow-md flex flex-col items-center justify-center p-4 backface-hidden">
-          <div className="text-teal-600 mb-2">{item.icon}</div>
-          <span className="text-md font-semibold text-gray-800">
-            {item.label}
-          </span>
-        </div>
+      {/* Desktop / Large Screen View (flip effect) */}
+      <div className="hidden sm:block [perspective:1000px] h-52">
+        <div className="relative h-full w-full transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+          {/* Front Side */}
+          <div className="absolute inset-0 bg-white rounded-xl shadow-md flex flex-col items-center justify-center p-4 backface-hidden h-full">
+            <div className="text-teal-600 mb-2">{item.icon}</div>
+            <span className="text-md font-semibold text-gray-800">
+              {item.label}
+            </span>
+          </div>
 
-        {/* Back Side */}
-        <div className="absolute inset-0 bg-teal-600 text-white rounded-xl shadow-md flex items-center justify-center rotate-y-180 backface-hidden px-6">
-          <span className="text-md font-medium">{item.desc}</span>
+          {/* Back Side */}
+          <div className="absolute inset-0 bg-teal-600 text-white rounded-xl shadow-md flex items-center justify-center rotate-y-180 backface-hidden px-6 h-full">
+            <span className="text-md font-medium text-center">{item.desc}</span>
+          </div>
         </div>
+      </div>
+
+      {/* Mobile View (no flip) */}
+      <div className=" sm:hidden bg-white rounded-xl shadow-md p-4 space-y-2 h-92 flex flex-col items-center justify-center">
+        <div className="text-teal-600">{item.icon}</div>
+        <div className="text-md font-semibold text-gray-800">{item.label}</div>
+        <div className="text-sm text-gray-600 text-center px-2">{item.desc}</div>
       </div>
     </div>
   ))}
 </div>
+
+
 
       </div>
 
