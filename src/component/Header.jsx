@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import coins from "../assets/4.jpg";
-import coins2 from "../assets/couple2.jpg"; 
+import coins2 from "../assets/retirement.jpg"; 
 import coins3 from "../assets/family.jpg";
 import { useNavigate } from "react-router-dom";
 
