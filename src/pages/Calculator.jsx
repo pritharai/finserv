@@ -32,7 +32,7 @@ const Calculator = () => {
 
   return (
     <>
-    <div className="bg-gradient-to-r from-blue-50 to-green-50 via-white w-full min-h-70 flex flex-col justify-center items-center px-4 text-center">
+    <div className="bg-gradient-to-r from-blue-100 to-green-100 w-full min-h-70 flex flex-col justify-center items-center px-4 text-center ">
         <h2 className="text-4xl sm:text-5xl font-extrabold mb-4 text-blue-800">
           Investment Calculators
         </h2>
@@ -45,7 +45,7 @@ const Calculator = () => {
       
 
       {/* Tab Buttons */}
-      <div className="flex flex-wrap justify-center gap-3 mb-8">
+      <div className="flex flex-wrap justify-center gap-3 mb-8 py-4">
         {[
           "SIP",
           "SWP",

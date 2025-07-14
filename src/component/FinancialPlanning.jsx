@@ -51,9 +51,9 @@ const features = [
 
 const FinancialPlanning = () => {
   return (
-    <div className="min-h-screen px-6 py-12 bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="max-w-5xl mx-auto text-center mb-12">
+      <div className="max-w-full mx-auto text-center mb-12 bg-gradient-to-r from-blue-100 to-green-100 py-16">
         <h1 className="text-4xl font-bold text-blue-800 mb-4">
           Your Guide to Comprehensive Financial Planning
         </h1>
@@ -63,7 +63,7 @@ const FinancialPlanning = () => {
       </div>
 
       {/* Features Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-10">
         {features.map((item, idx) => (
           <div
             key={idx}
@@ -79,9 +79,9 @@ const FinancialPlanning = () => {
       </div>
 
       {/* CTA */}
-      <div className="mt-16 max-w-4xl mx-auto text-center bg-gradient-to-r from-teal-50 via-white to-blue-50 p-8 rounded-lg border-l-4 border-blue-600 shadow-md">
-        <h2 className="text-2xl font-bold text-blue-700 mb-2">📞 Ready to Plan Your Future?</h2>
-        <p className="text-gray-700 mb-4">Book a free consultation and get personalized financial guidance tailored to your life goals.</p>
+      {/* <div className="mt-16 max-w-4xl mx-auto text-center bg-gradient-to-r from-teal-50 via-white to-blue-50 p-8 rounded-lg border-l-4 border-blue-600 shadow-md">
+        <h2 className="text-2xl font-bold text-blue-700 mb-2"></h2>
+        <p className="text-gray-700 mb-4"></p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4">
   <a
     href="https://wa.me/919463984957?text=Hi%20I%20want%20to%20book%20a%20financial%20planning%20session"
@@ -99,7 +99,34 @@ const FinancialPlanning = () => {
     Explore Financial Calculators
   </a>
 </div>
-      </div>
+      </div> */}
+
+      <section className="bg-gradient-to-r from-blue-600 to-teal-500 py-16">
+        <div className="max-w-4xl mx-auto text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">
+            📞 Ready to Plan Your Future?
+          </h2>
+          <p className="mb-6 text-lg">
+            Book a free consultation and get personalized financial guidance tailored to your life goals.
+          </p>
+          <div className="space-x-4 space-y-3">
+            <a
+              href="/mutual-fund-forms"
+              className="inline-block bg-white text-blue-700 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
+            >
+              Explore Financial Calculators
+            </a>
+            <a
+              href="https://wa.me/919463984957?text=I%20need%20help%20choosing%20a%20mutual%20fund"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-green-600 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
+            >
+              Book a Free Consultation
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

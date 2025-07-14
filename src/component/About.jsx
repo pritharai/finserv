@@ -3,9 +3,9 @@ import { Button } from "@mui/material";
 
 const About = () => {
   return (
-    <div className="bg-gradient-to-r from-green-50 to-blue-50 flex flex-col lg:flex-row items-center justify-between w-full px-6 sm:px-10 lg:px-20 py-12">
+    <div className="bg-gradient-to-r from-green-50 to-blue-50 flex flex-col lg:flex-row items-center justify-between w-full px-6 sm:px-10 lg:px-20 py-12" >
       {/* Text Section */}
-      <div className="flex-1 mb-10 lg:mb-0 lg:mr-10">
+      <div className="flex-1 mb-10 lg:mb-0 lg:mr-10" data-aos="fade-right">
         <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-700">
           Know Your Policies
         </h1>
@@ -27,7 +27,7 @@ const About = () => {
       </div>
 
       {/* Image Section */}
-      <div className="flex-1 w-full">
+      <div className="flex-1 w-full" data-aos="fade-left">
         <img
           className="w-full h-auto object-cover rounded-md"
           src={Couple3}

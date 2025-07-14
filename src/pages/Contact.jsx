@@ -30,33 +30,8 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 px-6 py-5">
-      {/* Booking Section */}
-      <div className="max-w-5xl mx-auto mb-12 px-0">
-        <div className="bg-gradient-to-r from-green-50 via-white to-blue-50 border-l-4 border-teal-600 p-6 rounded-md shadow-md">
-          <h2 className="text-2xl font-bold text-teal-700 mb-2">📅 Book a Free Consultation</h2>
-          <p className="text-gray-700 mb-4">
-            Want to make confident financial decisions? Schedule a 1-on-1 session to:
-          </p>
-          <ul className="list-disc pl-6 text-gray-600 space-y-1">
-            <li>Understand your financial position</li>
-            <li>Clarify goals like education, retirement, or tax-saving</li>
-            <li>Get product-neutral advice tailored to you</li>
-          </ul>
-          <div className="mt-5">
-            <a
-              href="https://wa.me/919463984957?text=Hi%20I%20want%20to%20book%20a%20consultation"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-md font-semibold shadow transition"
-            >
-              Book Now on WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Contact Section */}
-      <div className="max-w-5xl mx-auto bg-gradient-to-r from-blue-50 via-white to-green-50 border-l-4 border-blue-600 p-10 rounded-md shadow-md mt-10" data-aos="fade-up">
+    <div className="max-w-5xl mx-auto bg-gradient-to-r from-blue-50 via-white to-green-50 border-l-4 border-blue-600 p-10 rounded-md shadow-md mt-10" data-aos="fade-up">
         <h1 className="text-3xl font-bold text-center text-blue-800">Contact Us</h1>
         <div className="h-1 w-24 bg-teal-500 mx-auto mt-2 mb-8 rounded"></div>
 
@@ -146,6 +121,34 @@ const Contact = () => {
           </form>
         </div>
       </div>
+
+      {/* Booking Section */}
+      <div className="max-w-5xl mx-auto mb-12 px-0 py-10" data-aos="fade-left">
+        <div className="bg-gradient-to-r from-green-50 via-white to-blue-50 border-l-4 border-green-600 p-6 rounded-md shadow-md">
+          <h2 className="text-2xl font-bold text-green-700 mb-2">📅 Book a Free Consultation</h2>
+          <p className="text-gray-700 mb-4">
+            Want to make confident financial decisions? Schedule a 1-on-1 session to:
+          </p>
+          <ul className="list-disc pl-6 text-gray-600 space-y-1">
+            <li>Understand your financial position</li>
+            <li>Clarify goals like education, retirement, or tax-saving</li>
+            <li>Get product-neutral advice tailored to you</li>
+          </ul>
+          <div className="mt-5">
+            <a
+              href="https://wa.me/919463984957?text=Hi%20I%20want%20to%20book%20a%20consultation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-md font-semibold shadow transition"
+            >
+              Book Now on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+      
 
       {/* Map */}
       <div className="mt-10 rounded overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">

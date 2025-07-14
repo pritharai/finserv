@@ -94,7 +94,7 @@ const ChooseUsCard = () => {
         {/* Image */}
         <div className="hidden lg:flex flex-1 justify-center items-center">
           <img
-            className="rounded-xl shadow-2xl max-w-2xl h-120 transform transition-transform duration-700 hover:scale-105"
+            
             src={salesman}
             alt="Why Choose Us"
           />

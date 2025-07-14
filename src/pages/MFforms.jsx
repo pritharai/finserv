@@ -232,7 +232,7 @@ const MutualFundFormsPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-50 via-white to-green-50 py-20 px-6">
+      <section className="bg-gradient-to-r from-blue-100 to-green-100 py-20 px-6">
   <div className="max-w-5xl mx-auto text-center lg:text-left">
     <h1 className="text-4xl sm:text-5xl font-extrabold text-blue-800 mb-4">
       Common Application Forms
@@ -288,7 +288,7 @@ const MutualFundFormsPage = () => {
         target={showOnline ? "_blank" : "_self"}
         rel="noopener noreferrer"
         download={!showOnline}
-        className="bg-white border p-4 rounded-xl shadow hover:shadow-lg flex items-center gap-4 transition"
+        className="bg-white p-4 border-l-4 border-blue-500 rounded-xl shadow hover:shadow-lg flex items-center gap-4 transition"
       >
         <img
           src={form.logo || "/logos/default.png"}

@@ -36,10 +36,11 @@ const PartnersSection = () => {
   return (
     <section className="bg-blue-50 py-16 px-4">
       <div className="max-w-7xl mx-auto text-center mb-12">
+        
+        <h1 className="text-3xl font-bold text-gray-900 mt-2">Our Partners</h1>
         <h2 className="text-gray-600 text-sm tracking-widest uppercase">
           Work With Some of the Most Respected Global Brands
         </h2>
-        <h1 className="text-3xl font-bold text-gray-900 mt-2">Our Partners</h1>
       </div>
 
       <div className="marquee-container mt-10 bg-white py-4 rounded shadow-inner">

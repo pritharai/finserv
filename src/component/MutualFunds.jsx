@@ -27,7 +27,7 @@ const MutualFunds = () => {
     <div className="min-h-screen bg-gray-50">
 
       {/* 1. Hero Section */}
-      <section className="bg-gradient-to-r from-blue-100 via-white to-green-100 py-16 px-6">
+      <section className="bg-gradient-to-r from-blue-100 to-green-100 py-16 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div data-aos="fade-right">
             <h1 className="text-5xl font-bold text-blue-800 mb-4">
@@ -125,7 +125,7 @@ const MutualFunds = () => {
       </section>
 
       {/* 5. CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-teal-500 py-16 px-6">
+      <section className="bg-gradient-to-r from-blue-500 to-green-500 py-16 px-6">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl font-bold mb-4">
             Still not sure which fund to choose?

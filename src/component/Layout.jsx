@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <main className='p-[1rem] mt-20'>
+      <main className='mt-20'>
         <Outlet />
         <ScrollToTopButton/>
       </main>

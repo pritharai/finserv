@@ -30,7 +30,7 @@ const RiskManagement = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-red-100 via-white to-blue-100 py-16 px-6 text-center">
+      <section className="bg-gradient-to-r from-blue-100 to-green-100 py-16 px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-blue-800 mb-4">
             Risk Management in Financial Planning
@@ -84,11 +84,11 @@ const RiskManagement = () => {
       </section>
 
       {/* CTA */}
-      <section className="max-w-5xl mx-auto mt-16 bg-gradient-to-r from-teal-100 to-blue-100 border-l-4 border-blue-600 rounded-lg shadow-md px-8 py-10 text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">
+      <section className="max-w-full mx-auto mt-16 bg-gradient-to-r from-blue-500 to-green-500 rounded-lg shadow-md px-8 py-10 text-center">
+        <h2 className="text-2xl font-bold mb-2 text-white">
           📊 Start Managing Your Risks Today
         </h2>
-        <p className="text-gray-700 mb-4">
+        <p className="text-white mb-4">
           Book a free consultation to assess your current financial risks and get a customized protection strategy.
         </p>
         <a

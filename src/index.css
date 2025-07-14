@@ -24,6 +24,7 @@
 .marquee-container:hover .marquee-track {
   animation-play-state: paused;
 }
+
 .backface-hidden {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;

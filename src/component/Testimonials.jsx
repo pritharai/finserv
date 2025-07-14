@@ -25,7 +25,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-gradient-to-br from-blue-200 to-green-200 py-20 px-6">
+    <section className="bg-gradient-to-br from-blue-200 to-green-200 py-20">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
         <p className="text-gray-600 mb-12">Real stories from people we’ve helped.</p>
@@ -40,7 +40,7 @@ const Testimonials = () => {
               viewport={{ once: true }}
               className="bg-white shadow-xl p-6 rounded-lg relative"
             >
-              <FaQuoteLeft className="text-yellow-400 text-3xl absolute -top-5 left-5 bg-white rounded-full" />
+              <FaQuoteLeft className="text-yellow-400 text-3xl absolute -top-1 left-40 bg-white rounded" />
               <p className="text-gray-700 mb-6 mt-4 italic">"{testimonial.content}"</p>
               <div className="text-left">
                 <p className="text-lg font-semibold text-gray-800">{testimonial.name}</p>

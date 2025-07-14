@@ -76,7 +76,7 @@ const FAQsPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-50 via-white to-green-50 py-20 px-6">
+      <section className="bg-gradient-to-r from-blue-100 to-green-100 py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-blue-800 mb-4">
             FAQs
@@ -90,7 +90,7 @@ const FAQsPage = () => {
       </section>
 
       {/* FAQs Accordion */}
-      <section className="max-w-5xl mx-auto px-6 py-12 bg-white rounded-xl shadow-md -mt-8 z-10 relative">
+      <section className="max-w-5xl mx-auto px-6 py-12 bg-white rounded-xl shadow-md mt-10 z-10 relative">
         {faqs.map((faq, idx) => (
           <FAQItem
             key={idx}

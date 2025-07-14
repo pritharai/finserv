@@ -36,7 +36,7 @@ const Approach = () => {
           {approachData.map((item, index) => (
             <div
               key={index}
-              className="bg-teal-200 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 "
+              className="bg-green-100 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1 "
             >
               <div className="mb-4 flex justify-center transition-transform duration-400 transform hover:rotate-x-[360deg]">
                 {item.icon}

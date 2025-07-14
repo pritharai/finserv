@@ -52,8 +52,8 @@ const AboutUs = () => {
     <>
       <div className="px-6 py-10 max-w-7xl mx-auto">
         {/* Header */}
-        <h1 className="text-5xl font-light text-center text-gray-800 mb-20">
-          About <span className="font-bold text-teal-600">VSP FinSserv</span>
+        <h1 className="text-5xl font-bold text-center text-gray-800 mb-20">
+          About <span className=" text-blue-800">VSP FinsServ</span>
         </h1>
 
         {/* Introduction Section */}
@@ -63,7 +63,7 @@ const AboutUs = () => {
             data-aos="fade-right"
           >
             <p className="mb-4">
-              Welcome to VSP FinSserv — a next-generation financial advisory firm built on trust, technology, and transparency.
+              Welcome to <strong className="text-green-600 text-xl">VSP FinsServ</strong> — a next-generation financial advisory firm built on trust, technology, and transparency.
               With dual certifications from AMFI (Mutual Funds) and IRDA (Insurance), and a strong technical foundation (B.Tech & MCA),
               we bridge the gap between financial acumen and digital enablement.
             </p>
@@ -81,7 +81,7 @@ const AboutUs = () => {
         </div>
 
         {/* What We Offer */}
-        <h2 className="text-3xl font-semibold text-center text-teal-700 mb-10">
+        <h2 className="text-4xl font-bold text-center text-blue-800 mb-10">
           What We Offer
         </h2>
         <div
@@ -112,7 +112,7 @@ const AboutUs = () => {
         </div>
 
         {/* Why Choose Us */}
-        <h2 className="text-3xl font-bold text-center text-slate-700 mb-10">
+        <h2 className="text-4xl font-bold text-center text-blue-800 mb-10">
           What Sets Us Apart?
         </h2>
         <div
@@ -136,7 +136,7 @@ const AboutUs = () => {
         </div>
 
         {/* Back Side */}
-        <div className="absolute inset-0 bg-teal-600 text-white rounded-xl shadow-md flex items-center justify-center rotate-y-180 backface-hidden">
+        <div className="absolute inset-0 bg-teal-600 text-white rounded-xl shadow-md flex items-center justify-center rotate-y-180 backface-hidden px-6">
           <span className="text-md font-medium">{item.desc}</span>
         </div>
       </div>
@@ -147,9 +147,9 @@ const AboutUs = () => {
       </div>
 
       {/* FAQ */}
-      <div data-aos="fade-up">
+      {/* <div data-aos="fade-up">
         <FaqSection />
-      </div>
+      </div> */}
     </>
   );
 };
