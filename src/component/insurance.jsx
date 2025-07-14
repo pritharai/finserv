@@ -5,23 +5,37 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 // Images
-import lic from "../assets/logos/lic.jpg";
+import icici from "../assets/logos/icici.jpg";
+import liberty from "../assets/logos/liberty.jpg"
 import hdfc from "../assets/logos/HDFC-Ergo.png";
-import tata from "../assets/logos/tata.png";
-import sbi from "../assets/logos/sbi.jpeg";
+import go from "../assets/logos/go.png"
 import insuranceImg from "../assets/insurance.jpg"
+import niva from "../assets/logos/niva-bupa.png"
+import care from "../assets/logos/care.jpg"
+import manipal from "../assets/logos/manipal-cigna.png"
+import star from "../assets/logos/star.png"
+import tnia from "../assets/logos/TNIA.png"
+import bajajall from "../assets/logos/Bajaj-Allianz.png"
+import future from "../assets/logos/future.png"
 
 const insuranceData = {
   Health: [
-    { name: "LIC of India", logo: lic, link: "https://licindia.in/Customer-Services/Pay-Premium-Online" },
-    { name: "HDFC Ergo", logo: hdfc, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "Niva Bupa Health Insurance Co. Ltd", logo: niva, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "HDFC ERGO General Insurance Company Limited", logo: hdfc, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "Care Health Insurance Ltd", logo: care, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "Star Health and Allied Insurance Co Ltd", logo: star, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "The New India Assurance Co Ltd", logo: tnia, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "ManipalCigna Health Insurance Company Limited", logo: manipal, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
   ],
   Motor: [
-    { name: "TATA AIG", logo: tata, link: "https://www.tataaig.com/motor-insurance" },
-    { name: "SBI General", logo: sbi, link: "https://www.sbigeneral.in/portal/renewal" },
-  ],
-  General: [
-    { name: "HDFC Ergo General", logo: hdfc, link: "https://www.hdfcergo.com/" },
+    { name: "The New India Assurance Co Ltd", logo: tnia, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "Go Digit General Insurance Limited", logo: go, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "ICICI Lombard General Insurance", logo: icici, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "HDFC ERGO General Insurance Company Limited", logo: hdfc, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "Liberty General Insurance Limited", logo: liberty, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "Bajaj Allianz General Insurance Limited", logo: bajajall, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "Future Generali India Insurance Limited", logo: future, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+  
   ],
 };
 
@@ -70,7 +84,7 @@ It's like a financial safety net — you might not need it every day, but when l
 
       {/* Category Toggle */}
       <div className="flex justify-center gap-4 mb-10">
-        {["Health", "Motor", "General"].map((cat) => (
+        {["Health", "Motor"].map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
@@ -82,7 +96,6 @@ It's like a financial safety net — you might not need it every day, but when l
           >
             {cat === "Health" && <FaHeartbeat className="inline-block mr-2" />}
             {cat === "Motor" && <FaCar className="inline-block mr-2" />}
-            {cat === "General" && <FaShieldAlt className="inline-block mr-2" />}
             {cat} Insurance
           </button>
         ))}

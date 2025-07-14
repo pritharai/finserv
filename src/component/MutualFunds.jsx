@@ -11,6 +11,7 @@ import sbi from "../assets/logos/sbi.jpeg";
 import tata from "../assets/logos/tata.png";
 import axis from "../assets/logos/axis.png";
 import bandhan from "../assets/logos/bandhan.jpg";
+import union from "../assets/logos/union.png"
 import mutualImg from "../assets/mutualImg.png"; // replace with your actual image path
 
 const topPartners = [
@@ -19,7 +20,7 @@ const topPartners = [
   { name: "SBI Mutual Fund", logo: sbi },
   { name: "TATA Mutual Fund", logo: tata },
   { name: "Axis Mutual Fund", logo: axis },
-  { name: "Bandhan Mutual Fund", logo: bandhan },
+  { name: "Union Mutual Fund", logo: union },
 ];
 
 const MutualFunds = () => {
@@ -41,7 +42,7 @@ const MutualFunds = () => {
             <img
               src={mutualImg}
               alt="Mutual Funds"
-              className="w-full max-w-md mx-auto"
+              className="w-full max-w-lg ml-30"
             />
           </div>
         </div>
@@ -105,7 +106,7 @@ const MutualFunds = () => {
         <h2 className="text-3xl font-semibold text-gray-800 mb-10 text-center">
           Our Top Mutual Fund Partners
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
+        <div className="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
           {topPartners.map((partner, i) => (
             <div
               key={i}
@@ -114,7 +115,7 @@ const MutualFunds = () => {
               <img
                 src={partner.logo}
                 alt={partner.name}
-                className="h-16 object-contain mb-2"
+                className="max-h-16 object-contain mb-2"
               />
               <p className="text-sm font-medium text-gray-700 text-center">
                 {partner.name}

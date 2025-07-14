@@ -17,6 +17,27 @@ import hdfcergo from "../assets/logos/HDFC-ERGO.png";
 import manipal from "../assets/logos/manipal-cigna.png";
 import bajajall from "../assets/logos/Bajaj-Allianz.png";
 import tnia from "../assets/logos/TNIA.png"
+import uti from "../assets/logos/uti.webp"
+import bajajfin from "../assets/logos/bajaj-finserv.webp";
+import canara from "../assets/logos/canara.png";
+import care from "../assets/logos/care.jpg";
+import dsp from "../assets/logos/dsp.png";
+import future from "../assets/logos/future.png";
+import go from "../assets/logos/go.png";
+import hsbc from "../assets/logos/hsbc.avif";
+import icici from "../assets/logos/icici.jpg";
+import invesco from "../assets/logos/invesco.jpg"
+import investwell from "../assets/logos/investwell.png";
+import liberty from "../assets/logos/liberty.jpg";
+import mahindra from "../assets/logos/mahindra.png";
+import navi from "../assets/logos/navi.jpg";
+import nippon from "../assets/logos/nippon.webp";
+import quant from "../assets/logos/quant.png";
+import samco from "../assets/logos/samco.webp";
+import star from "../assets/logos/star.png";
+import sundram from "../assets/logos/sundram.png";
+import trust from "../assets/logos/trust.png";
+
 
 // Add more logos as needed...
 
@@ -52,12 +73,24 @@ const partners = [
     type: "Investment",
   },
   {
-    name: "HDFC Mutual Fund",
-    logo: hdfc,
-    link: "https://www.hdfcfund.com/",
+    name: "Invesco Mutual Fund",
+    logo: invesco,
+    link: "https://www.axismf.com/",
     type: "Investment",
   },
   {
+    name: "Mahindra Manulife Mutual Fund",
+    logo: mahindra,
+    link: "https://www.axismf.com/",
+    type: "Investment",
+  },
+  {
+    name: "Canera Robeco Mutual Fund",
+    logo: canara,
+    link: "https://www.axismf.com/",
+    type: "Investment",
+  },
+   {
     name: "TATA Mutual Fund",
     logo: tata,
     link: "https://www.tatamutualfund.com/",
@@ -70,6 +103,19 @@ const partners = [
     type: "Investment",
   },
   {
+    name: "HDFC Mutual Fund",
+    logo: hdfc,
+    link: "https://www.hdfcfund.com/",
+    type: "Investment",
+  },
+ {
+    name: "HSBC Mutual Fund",
+    logo: hsbc,
+    link: "https://www.unionmf.com/",
+    type: "Investment",
+  },
+  
+  {
     name: "SBI Mutual Fund",
     logo: sbi,
     link: "https://www.sbimf.com/",
@@ -81,6 +127,43 @@ const partners = [
     link: "https://www.axismf.com/",
     type: "Investment",
   },
+  {
+    name: "UTI Mutual Fund",
+    logo: uti,
+    link: "https://www.axismf.com/",
+    type: "Investment",
+  },
+  {
+    name: "Sundram Mutual Fund",
+    logo: sundram,
+    link: "https://www.axismf.com/",
+    type: "Investment",
+  },
+  {
+    name: "Trust Mutual Fund",
+    logo: trust,
+    link: "https://www.axismf.com/",
+    type: "Investment",
+  },
+  {
+    name: "Samco Mutual Fund",
+    logo: samco,
+    link: "https://www.axismf.com/",
+    type: "Investment",
+  },
+  {
+    name: "Nippon Mutual Fund",
+    logo: nippon,
+    link: "https://www.axismf.com/",
+    type: "Investment",
+  },
+  {
+    name: "Quant Mutual Fund",
+    logo: quant,
+    link: "https://www.axismf.com/",
+    type: "Investment",
+  },
+  
   // Add insurance partners below similarly if needed
   {
     name: "Niva Bupa Health Insurance",
@@ -95,22 +178,59 @@ const partners = [
     type: "Health Insurance",
   },
   {
+    name: "Star Health & Allied Insurance",
+    logo: star,
+    link: "https://www.axismf.com/",
+    type: "Health Insurance",
+  },
+  {
+    name: "Care Health Insurance",
+    logo: care,
+    link: "https://www.axismf.com/",
+    type: "Health Insurance",
+  },
+  {
     name: "The New India Assurance",
     logo: tnia,
     link: "https://www.axismf.com/",
-    type: "Motor Insurance",
+    type: "General Insurance",
   },
+  {
+    name: "Go Digit General Insurance",
+    logo: go,
+    link: "https://www.axismf.com/",
+    type: "General Insurance",
+  },
+  {
+    name: "ICICI Lombard General Insurance",
+    logo: icici,
+    link: "https://www.axismf.com/",
+    type: "General Insurance",
+  },  
   {
     name: "HDFC ERGO",
     logo: hdfcergo,
     link: "https://www.axismf.com/",
-    type: "Motor Insurance",
+    type: "General Insurance",
   },
+  {
+    name: "Liberty General Insurance",
+    logo: liberty,
+    link: "https://www.axismf.com/",
+    type: "General Insurance",
+  },
+  
   {
     name: "Bajaj Allianz",
     logo: bajajall,
     link: "https://www.axismf.com/",
-    type: "Motor Insurance",
+    type: "General Insurance",
+  },
+  {
+    name: "Future Generali India Insurance",
+    logo: future,
+    link: "https://www.axismf.com/",
+    type: "General Insurance",
   },
 ];
 
@@ -125,14 +245,14 @@ const PartnersPage = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" >
           {partners.map((partner, idx) => (
             <a
               key={idx}
-              href={partner.link}
-              target="_blank"
+              
               rel="noopener noreferrer"
               className="bg-white rounded-lg shadow hover:shadow-lg transition-transform transform hover:scale-105 duration-300 flex flex-col items-center justify-center p-4"
+              data-aos="fade-up" data-aos-delay={idx*50}
             >
               <img
                 src={partner.logo}

@@ -2,47 +2,73 @@ import React from "react";
 import { FaWhatsapp, FaHeartbeat, FaCar } from "react-icons/fa";
 
 // Health & Motor Insurance Logos
-import star from "../assets/logos/star.png";
+import icici from "../assets/logos/icici.jpg";
+import liberty from "../assets/logos/liberty.jpg"
 import hdfc from "../assets/logos/HDFC-Ergo.png";
-import nivabupa from "../assets/logos/niva-bupa.png";
-import care from "../assets/logos/care.jpg";
-import bajaj from "../assets/logos/Bajaj-Allianz.png";
-import manipal from "../assets/logos/manipal-cigna.png";
+import go from "../assets/logos/go.png"
+// import insuranceImg from "../assets/insurance.jpg"
+import niva from "../assets/logos/niva-bupa.png"
+import care from "../assets/logos/care.jpg"
+import manipal from "../assets/logos/manipal-cigna.png"
+import star from "../assets/logos/star.png"
+import tnia from "../assets/logos/TNIA.png"
+import bajajall from "../assets/logos/Bajaj-Allianz.png"
+import future from "../assets/logos/future.png"
 
 const healthPartners = [
   {
     name: "Niva Bupa Health Insurance",
-    url: "https://www.nivabupa.com/quick-pay.html",
-    logo: nivabupa,
+    url: "https://paytm.com/insurance-premium-payment/niva-bupa-health-insurance-company-limited",
+    logo: niva,
   },
   {
     name: "Manipal Cigna",
-    url: "https://www.manipalcigna.com/pay-renew-premium",
+    url: "https://paytm.com/insurance-premium-payment/manipalcigna-health-insurance",
     logo: manipal,
   },
   {
     name: "HDFC Ergo General",
-    url: "https://www.hdfclife.com/health-insurance/pay-premium-online",
+    url: "https://paytm.com/insurance-premium-payment/hdfc-ergo-general-insurance-company-health",
     logo: hdfc,
   },
   {
     name: "Care Health Insurance",
-    url: "https://www.hdfclife.com/health-insurance/pay-premium-online",
+    url: "https://paytm.com/insurance-premium-payment/care-health-insurance",
     logo: care,
   },
   {
     name: "Star Health Insurance",
-    url: "https://www.hdfclife.com/health-insurance/pay-premium-online",
+    url: "https://paytm.com/insurance-premium-payment/star-health-and-allied-insurance",
     logo: star,
+  },
+  {
+    name: "The New India Assurance",
+    url: "https://www.newindia.co.in/quick-help/quick-renewal",
+    logo: tnia,
   },
 ];
 
 const motorPartners = [
   {
     name: "Bajaj Allianz",
-    url: "https://general.bajajallianz.com/BuyNow/UpdatePremiumPaymentDetails.jsp",
-    logo: bajaj,
+    url: "https://paytm.com/insurance-premium-payment/bajaj-allianz-general-insurance",
+    logo: bajajall,
   },
+  {
+    name: "The New India Assurance",
+    url: "https://www.newindia.co.in/quick-help/quick-renewal",
+    logo: tnia,
+  },
+  {
+    name: "HDFC Ergo General",
+    url: "https://paytm.com/insurance-premium-payment/hdfc-ergo-general-insurance-motor",
+    logo: hdfc,
+  },
+  { name: "Go Digit General Insurance Limited", logo: go, url: "https://paytm.com/insurance-premium-payment/go-digit-insurance" },
+  { name: "ICICI Lombard General Insurance", logo: icici, url: "https://paytm.com/insurance-premium-payment/icici-lombard-general-insurance-motor" },
+      { name: "Liberty General Insurance Limited", logo: liberty, link: "https://paytm.com/insurance-premium-payment/liberty-general-insurance-limited" },
+      { name: "Future Generali India Insurance Limited", logo: future, link: "https://paytm.com/insurance-premium-payment/future-generali-india-general-insurance" },
+  
   
 ];
 
