@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import sale1 from "../assets/sale1.jpg";
+import salesman from "../assets/Salesman2.png";
 import { FaCheckCircle } from "react-icons/fa";
 
 const points = [
@@ -92,10 +92,10 @@ const ChooseUsCard = () => {
         </div>
 
         {/* Image */}
-        <div className="flex-1 flex justify-center items-center">
+        <div className="hidden lg:flex flex-1 justify-center items-center">
           <img
-            className="rounded-xl shadow-2xl w-full max-w-sm transform transition-transform duration-700 hover:scale-105"
-            src={sale1}
+            className="rounded-xl shadow-2xl max-w-2xl h-120 transform transition-transform duration-700 hover:scale-105"
+            src={salesman}
             alt="Why Choose Us"
           />
         </div>

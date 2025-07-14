@@ -58,7 +58,7 @@ const PayPremium = () => {
     <div className="min-h-screen px-6 py-12 bg-gray-50">
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center mb-14">
-        <h1 className="text-4xl font-bold text-blue-900 mb-4">Pay Your Insurance Premium Online</h1>
+        <h1 className="text-4xl font-bold text-blue-800 mb-4">Pay Your Insurance Premium Online</h1>
         <p className="text-gray-700 text-lg max-w-2xl mx-auto">
           Pay your insurance premium securely through trusted partner links.
         </p>

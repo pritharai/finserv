@@ -32,7 +32,7 @@ const RiskManagement = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-100 via-white to-blue-100 py-16 px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl font-bold text-blue-800 mb-4">
             Risk Management in Financial Planning
           </h1>
           <p className="text-lg text-gray-700">

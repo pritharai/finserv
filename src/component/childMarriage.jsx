@@ -16,7 +16,7 @@ const ChildMarriageCalculator = () => {
     (monthlyRate / (Math.pow(1 + monthlyRate, totalMonths) - 1));
 
   return (
-    <div className="bg-white rounded shadow p-6 max-w-xl mx-auto">
+    <div className="bg-white rounded shadow p-6 max-w-xl mx-auto" data-aos="fade-up">
       <h2 className="text-3xl font-bold mb-4 text-center text-blue-900">
         Child Marriage Planning Calculator
       </h2>

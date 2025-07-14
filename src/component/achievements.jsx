@@ -49,7 +49,7 @@ const AchievementsSection = () => {
       {/* Stats Box */}
       <div
         ref={counterRef}
-        className="absolute left-1/2 transform -translate-x-1/2 w-[90%] md:w-[70%] bg-yellow-400 text-white rounded-xl shadow-xl py-10 px-6 grid grid-cols-2 md:grid-cols-2 justify-between text-center z-20"
+        className="absolute bottom-[10px] left-1/2 transform -translate-x-1/2 w-[90%] md:w-[70%] bg-yellow-400 text-white rounded-xl shadow-xl py-5 px-6 grid grid-cols-2 md:grid-cols-2 justify-between text-center z-20"
       >
         <div>
           <h3 className="text-4xl font-extrabold">

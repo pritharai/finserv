@@ -36,7 +36,7 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const nodemailer = require("nodemailer");
-// const { getModalUtilityClass } = require("@mui/material");
+
 
 admin.initializeApp();
 
@@ -44,12 +44,11 @@ const email = functions.config().gmail.email;
 const password = functions.config().gmail.password;
 
 
-// 💡 Use a Gmail account with App Passwords (recommended)
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: email,
-    pass: password // Not your regular password
+    pass: password 
   },
 });
 

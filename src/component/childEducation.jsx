@@ -15,7 +15,7 @@ const ChildEducationCalculator = () => {
     (futureCost * (returns / 12)) / (Math.pow(1 + returns / 12, months) - 1);
 
   return (
-    <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md mt-10">
+    <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md mt-10" data-aos="fade-up">
       <h2 className="text-3xl font-bold text-center text-blue-900 mb-6">
         🎓 Child Education Calculator
       </h2>

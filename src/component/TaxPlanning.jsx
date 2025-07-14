@@ -29,7 +29,7 @@ const TaxPlanning = () => {
   return (
     <section className="bg-gradient-to-br from-blue-50 to-green-50 py-16 px-6">
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-800 mb-3">Smart Tax Planning</h2>
+        <h2 className="text-4xl font-bold text-blue-800 mb-3">Smart Tax Planning</h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Reduce your tax burden and grow your wealth with effective strategies aligned to your income and goals.
         </p>

@@ -25,6 +25,8 @@ import ElssCalculator from './component/ELSSCalculator'
 import RiskManagement from './component/Riskmanagement'
 import MutualFunds from './component/MutualFunds'
 import InsurancePage from './component/insurance'
+import ScrollOnLink from './component/ScrollOnLink'
+import FAQsPage from './component/faqs'
 
 
 
@@ -36,6 +38,7 @@ const App = () => {
 
   return (
     <>
+    <ScrollOnLink/>
     <Routes>
       <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
@@ -56,7 +59,8 @@ const App = () => {
         <Route path='elsscalculator' element={<ElssCalculator/>}/>
         <Route path='risk-management' element={<RiskManagement/>}/>
         <Route path='mutual-funds' element={<MutualFunds/>}/>
-        <Route path='insurance' element={<InsurancePage/>}/>        
+        <Route path='insurance' element={<InsurancePage/>}/>    
+        <Route path='faqs' element={<FAQsPage/>}/>    
       </Route>
       
       <Route path='*' element={<PageNotFound/>} />

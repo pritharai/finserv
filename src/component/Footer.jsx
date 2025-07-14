@@ -1,9 +1,9 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { BsGooglePlay, BsApple } from "react-icons/bs";
-import amfi_logo from "../assets/amfi-logo.jpg"
-import mutualfunds from "../assets/mutualfunds.webp"
-import logo from "../assets/logoo.png"; 
+import amfi_logo from "../assets/amfi-logo.jpg";
+import mutualfunds from "../assets/mutualfunds.webp";
+import logo from "../assets/logo1.png";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -24,11 +24,27 @@ const Footer = () => {
             Useful Links
           </h3>
           <ul className="space-y-1 text-sm">
-            <li><Link to="/" className="hover:text-yellow-30">Home</Link></li>
-            <li><Link to="/aboutus" className="hover:text-yellow-30">About Us</Link></li>
-            <li><Link to="/calculator" className="hover:text-yellow-30">Calculators</Link></li>
-            <li><Link to="/" className="hover:text-yellow-30">Privacy Policy</Link></li>
-            <li><Link to="/contact" className="hover:text-yellow-30">Contact Us</Link></li>
+            <li>
+              <Link to="/" className="hover:text-yellow-30">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/aboutus" className="hover:text-yellow-30">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/calculator" className="hover:text-yellow-30">
+                Calculators
+              </Link>
+            </li>
+            {/* <li><Link to="/" className="hover:text-yellow-30">Privacy Policy</Link></li> */}
+            <li>
+              <Link to="/contact" className="hover:text-yellow-30">
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -36,12 +52,28 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold text-green-600 mb-2">Services</h3>
           <ul className="space-y-1 text-sm">
-            <li>Financial Planning</li>
-            <li>Early Retirement</li>
-            <li>Risk Management</li>
-            <li>INS Planning</li>
-            <li>Tax Planning</li>
-            <li>NRI Corner</li>
+            <li>
+              <Link to="/financial-planning" className="hover:text-yellow-30 ">
+                Financial Planning
+              </Link>
+            </li>
+            {/* <li><Link to="/calculator?case=Retirement%20Planning" className="hover:text-yellow-30">Early Retirement</Link></li> */}
+            <li>
+              <Link to="/risk-management" className="hover:text-yellow-30">
+                Risk Management
+              </Link>
+            </li>
+            {/* <li>INS Planning</li> */}
+            <li>
+              <Link to="/taxplan" className="hover:text-yellow-30">
+                Tax Planning
+              </Link>
+            </li>
+            <li>
+              <Link to="/insurance" className="hover:text-yellow-30">
+                Insurance Policies
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -64,7 +96,6 @@ const Footer = () => {
               Dhandhra road, Ludhiana. Pin 141113, Punjab
             </li>
           </ul>
-          
         </div>
       </div>
 
@@ -72,15 +103,17 @@ const Footer = () => {
       <div className="mt-10 items-center justify-center text-xs text-gray-600 max-w-7xl mx-auto space-y-2 ">
         <p>
           <strong>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur, necessitatibus.
-          </strong>{" "}<br></br>
-          <strong>Disclaimer:</strong> Mutual fund investments are subject to market risks.
-          Please read the scheme information and other related documents
-          carefully before investing. Past performance is not indicative of
-          future returns. Please consider your specific investment requirements
-          before choosing a fund, or designing a portfolio that suits your
-          needs.
+            A comprehensive solution for all your investment needs, our
+            organization was founded with the mission to empower a million lives
+            on their journey to financial abundance.
+          </strong>{" "}
+          <br></br>
+          <strong>Disclaimer:</strong> Mutual fund investments are subject to
+          market risks. Please read the scheme information and other related
+          documents carefully before investing. Past performance is not
+          indicative of future returns. Please consider your specific investment
+          requirements before choosing a fund, or designing a portfolio that
+          suits your needs.
         </p>
         <p>
           <strong>VSP Finserv</strong> makes no warranties or representations...
@@ -94,20 +127,16 @@ const Footer = () => {
             <p>AMFI Registered</p>
             <p className="font-bold"></p>
           </div>
-          <img
-            src={mutualfunds}
-            alt="Mutual Funds Sahi Hai"
-            className="h-20"
-          />
+          <img src={mutualfunds} alt="Mutual Funds Sahi Hai" className="h-20" />
         </div>
       </div>
 
       {/* Copyright */}
       <div className="text-center text-xs text-gray-500 mt-6 border-t pt-4">
-        Copyright © 2025 VSP Finserv. All Rights Reserved.
+        Copyright © 2025 VSP FinsServ. All Rights Reserved.
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

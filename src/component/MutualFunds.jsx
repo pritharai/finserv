@@ -133,7 +133,7 @@ const MutualFunds = () => {
           <p className="mb-6 text-lg">
             Let us help you make the right investment choice based on your goals.
           </p>
-          <div className="space-x-4">
+          <div className="space-x-4 space-y-3">
             <a
               href="/mutual-fund-forms"
               className="inline-block bg-white text-blue-700 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Slider, ToggleButton, ToggleButtonGroup, Button } from "@mui/material";
 import { Doughnut } from "react-chartjs-2";
 import {
@@ -10,6 +11,8 @@ import {
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 const SIP = () => {
+  const navigate = useNavigate();
+  
   const [type, setType] = useState("SIP");
   const [monthlyInvestment, setMonthlyInvestment] = useState(25000);
   const [returnRate, setReturnRate] = useState(12);
@@ -43,7 +46,7 @@ const SIP = () => {
   };
 
   return (
-    <div className="p-8 max-w-6xl mx-auto bg-white rounded-md shadow-lg">
+    <div className="p-8 max-w-6xl mx-auto bg-white rounded-md shadow-lg" data-aos="fade-up">
       <h1 className="text-3xl font-bold text-center text-blue-900 mb-6">
         SIP Calculator
       </h1>
@@ -125,7 +128,7 @@ const SIP = () => {
           </div>
 
           <div className="mt-4 text-center">
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" onClick={() => navigate("/mutual-fund-forms")}>
               INVEST NOW
             </Button>
           </div>

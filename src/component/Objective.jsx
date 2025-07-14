@@ -1,11 +1,11 @@
 import React from 'react';
 import { FaBullhorn, FaGlobe, FaChartLine } from 'react-icons/fa';
-import mutualFundImage from '../assets/mutualfunds.webp'; // Replace with your actual path
+import mutualFundImage from '../assets/mfshihai.jpg'; // Replace with your actual path
 
 const Objective = () => {
   return (
     <section className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-6">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-3">
         {/* Left Text Section */}
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <h1 className="text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
@@ -21,17 +21,17 @@ const Objective = () => {
         </div>
 
         {/* Right Image Section */}
-        <div className="lg:w-1/2 flex justify-center">
+        <div className="lg:w-1/2 flex justify-end ml-auto">
           <img
             src={mutualFundImage}
             alt="Mutual Funds Sahi Hai"
-            className="rounded-lg shadow-lg max-w-xs lg:max-w-sm"
+            className="rounded-lg shadow-lg max-w-s lg:max-w-m h-50 w-100"
           />
         </div>
       </div>
 
       {/* Vision / Mission / Objective Cards */}
-      <div className="max-w-6xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+      <div className="max-w-7xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
         {/* Vision */}
         <div className="bg-white text-gray-800 rounded-lg p-6 shadow hover:shadow-lg transition-all duration-300">
           <div className="flex items-center justify-center text-yellow-500 text-3xl mb-4">

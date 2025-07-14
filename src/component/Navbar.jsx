@@ -71,7 +71,8 @@ const Navbar = () => {
                     </li>
 
                     <li><Link to="/calculator" className="hover:text-yellow-300">Calculators</Link></li>
-                    <li><Link to="/mutual-fund-forms" className="hover:text-yellow-300">MF Forms</Link></li>
+                    <li><Link to="/mutual-fund-forms" className="hover:text-yellow-300">Common Application Forms</Link></li>
+                    <Link to="/faqs" className="block hover:text-yellow-300">FAQs</Link>
                 </ul>
             </div>
 
@@ -98,7 +99,9 @@ const Navbar = () => {
                     </div>
 
                     <Link to="/calculator" className="block hover:text-yellow-300">Calculator</Link>
-                    <Link to="/mutual-fund-forms" className="hover:text-yellow-300">MF Forms</Link>
+                    <Link to="/mutual-fund-forms" className="hover:text-yellow-300">Common Application Forms</Link>
+                    <Link to="/faqs" className="block hover:text-yellow-300">FAQs</Link>
+
                 </div>
             )}
         </nav>
