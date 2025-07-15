@@ -8,7 +8,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: "*", // or your frontend domain
+}));
+
 app.use(express.json());
 
 app.post("/api/contact", async (req, res) => {
@@ -42,6 +45,11 @@ app.post("/api/contact", async (req, res) => {
     res.status(500).json({ success: false, error: "Failed to send email" });
   }
 });
+
+app.get("/", (req, res) => {
+  res.send("Welcome to the FinServ Contact API. Use POST /api/contact to send messages.");
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
