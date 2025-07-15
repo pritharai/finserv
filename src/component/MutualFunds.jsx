@@ -6,21 +6,25 @@ import {
   FaChartLine,
 } from "react-icons/fa";
 import lic from "../assets/logos/lic.jpg";
-import hdfc from "../assets/logos/hdfc.png";
-import sbi from "../assets/logos/sbi.jpeg";
-import tata from "../assets/logos/tata.png";
-import axis from "../assets/logos/axis.png";
+import helios from "../assets/logos/helios.png";
 import bandhan from "../assets/logos/bandhan.jpg";
-import union from "../assets/logos/union.png"
-import mutualImg from "../assets/mutualImg.png"; // replace with your actual image path
+import motilal from "../assets/logos/motilal.png";
+import axis from "../assets/logos/axis.png";
+import iti from "../assets/logos/iti.png";
+import union from "../assets/logos/union.png";
+import invesco from "../assets/logos/invesco.jpg";
+import mahindra from "../assets/logos/mahindra.png"
+import mutualImg from "../assets/mutualImg.png";
+ // replace with your actual image path
 
 const topPartners = [
-  { name: "LIC Mutual Fund", logo: lic },
-  { name: "HDFC Mutual Fund", logo: hdfc },
-  { name: "SBI Mutual Fund", logo: sbi },
-  { name: "TATA Mutual Fund", logo: tata },
-  { name: "Axis Mutual Fund", logo: axis },
-  { name: "Union Mutual Fund", logo: union },
+
+  { name: "ITI Mutual Fund", logo: iti },
+  { name: "Helios Mutual Fund", logo: helios },
+  { name: "Bandhan Mutual Fund", logo: bandhan },
+  { name: "Motilal Oswal Mutual Fund", logo: motilal },
+  { name: "Invesco Mutual Fund", logo: invesco },
+  { name: "Mahindra Manulife", logo: mahindra },
 ];
 
 const MutualFunds = () => {
@@ -123,7 +127,7 @@ const MutualFunds = () => {
                 alt={partner.name}
                 className="max-h-16 object-contain mb-2"
               />
-              <p className="text-sm font-medium text-gray-700 text-center">
+              <p className="text-sm font-medium text-gray-700 text-center max-w-full h-10">
                 {partner.name}
               </p>
             </div>
