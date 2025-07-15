@@ -64,7 +64,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <form className="space-y-6" action="https://formsubmit.co/pritharai873@gmail.com" method="POST" data-aos="fade-left">
+          <form className="space-y-6" action="https://formsubmit.co/vspfinserv@gmail.com" method="POST" data-aos="fade-left">
           <input type="hidden" name="_captcha" value="false" />
   <input type="hidden" name="_next" value="#" />
             <div className="relative">

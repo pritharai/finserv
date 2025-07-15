@@ -106,7 +106,7 @@ It's like a financial safety net — you might not need it every day, but when l
         {insuranceData[activeCategory].map((item, i) => (
           <a
             key={i}
-            href={item.link}
+            
             target="_blank"
             rel="noopener noreferrer"
             data-aos="fade-up"
@@ -119,7 +119,7 @@ It's like a financial safety net — you might not need it every day, but when l
               className="h-20 mx-auto mb-2 object-contain"
             />
             <h3 className="font-semibold text-gray-800">{item.name}</h3>
-            <p className="text-sm text-gray-500 mt-1">Pay Premium</p>
+            {/* <p className="text-sm text-gray-500 mt-1">Pay Premium</p> */}
           </a>
         ))}
       </div>

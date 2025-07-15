@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
-import coins from "../assets/4.jpg";
+import coins from "../assets/coins2.png";
 import coins2 from "../assets/retirement.jpg"; 
-import coins3 from "../assets/family.jpg";
+import coins3 from "../assets/fam.webp";
 import { useNavigate } from "react-router-dom";
 
 const images = [coins, coins2, coins3];
@@ -23,7 +23,7 @@ const Header = () => {
     setCurrent((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <div className="relative h-120 w-full overflow-hidden rounded-md">
+    <div className="relative h-120 w-full overflow-hidden">
       {/* Image Carousel */}
       {images.map((img, index) => (
         <img
@@ -37,23 +37,23 @@ const Header = () => {
       ))}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gray-800 opacity-70 z-20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-green-300 opacity-20 z-20" />
 
       {/* Text Content */}
-      <div className="absolute inset-0 z-30 flex flex-col justify-center items-start mx-16 py-8 text-white">
+      <div className="absolute inset-0 z-30 flex flex-col justify-center items-start mx-16 text-green-700">
         <h1 className="text-7xl font-bold mb-4 px-5">VSP FinsServ</h1>
         <p className="text-2xl mb-6 max-w-[500px] px-5">
           Empowering your financial future with trust and transparency.
         </p>
         <div className="flex space-x-4 px-5">
-          <Button variant="contained" color="primary" sx={{ mr: 2 }} 
+          <Button variant="contained" color="success" sx={{ mr: 2 }} 
           onClick={() => navigate("/contact")}>
             Contact Us
           </Button>
           <Button
             variant="outlined"
             color="inherit"
-            sx={{ borderColor: "white", color: "white" }}
+            sx={{ borderColor: "green", color: "green" }}
             onClick={() => navigate("/partners")}
           >
             Our Partners

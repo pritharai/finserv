@@ -112,7 +112,7 @@ const FinancialPlanning = () => {
 
     <div className="flex flex-col sm:flex-row gap-4 justify-center">
       <a
-        href="/mutual-fund-forms"
+        href="/calculators"
         className="w-full sm:w-64 text-center bg-white text-blue-700 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
       >
       Explore Financial Calculators

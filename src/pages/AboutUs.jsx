@@ -6,11 +6,11 @@ import { FaShieldAlt,
   FaHandsHelping,   
   FaBalanceScale,   
   FaHeadset         } from "react-icons/fa";
-import profile from "../assets/profile.jpg";
-import mf from "../assets/Mutual-Funds.webp";
-import insurance from "../assets/insurance.webp";
-import tech from "../assets/tech.jpg";
-import support from "../assets/support.jpg";
+import profile from "../assets/logo1.png";
+import mf from "../assets/mf1.jpg";
+import insurance from "../assets/insurance1.webp";
+import tech from "../assets/tech1.jpg";
+import support from "../assets/clientsupport.png";
 import FaqSection from "../component/faq";
 
 const AboutUs = () => {
@@ -75,7 +75,7 @@ const AboutUs = () => {
           <img
             src={profile}
             alt="VSP Profile"
-            className="rounded-xl object-cover shadow-lg w-full"
+            className="rounded-xl object-cover w-full"
             data-aos="fade-left"
           />
         </div>
@@ -100,13 +100,16 @@ const AboutUs = () => {
               />
 
             {/* Overlay for readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black to-black/20" />
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-gray/10 via-black to-gray/10" /> */}
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center text-white">
-                <h3 className="text-2xl font-bold mb-2">{card.title}</h3>
-                <p className="text-sm">{card.desc}</p>
-              </div>
+            <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
+  <div className="bg-white/80 p-4 rounded-lg shadow-md text-green-700">
+    <h3 className="text-2xl font-bold mb-2">{card.title}</h3>
+    <p className="text-sm">{card.desc}</p>
+  </div>
+</div>
+
             </div>
           ))}
         </div>

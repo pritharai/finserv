@@ -93,7 +93,7 @@ const Footer = () => {
             </li>
             <li className="flex items-start">
               <FaMapMarkerAlt className="mr-2 mt-1 text-green-500" />
-              Dhandhra road, Ludhiana. Pin 141113, Punjab
+              Urban Estate, Phase-2, Dugri, Ludhiana. Pin 141013, Punjab
             </li>
           </ul>
         </div>

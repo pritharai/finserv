@@ -4,16 +4,16 @@ import mutualFundImage from '../assets/mfshihai.jpg'; // Replace with your actua
 
 const Objective = () => {
   return (
-    <section className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20">
+    <section className="bg-gradient-to-br from-blue-300 to-green-300 text-white py-20">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-3">
         {/* Left Text Section */}
         <div className="lg:w-1/2 mb-10 lg:mb-0">
-          <h1 className="text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
+          <h1 className="text-4xl lg:text-5xl font-extrabold mb-4 leading-tight text-blue-800">
             The Best <br />
             Mutual Fund Services <br />
             To Grow Your Wealth
           </h1>
-          <p className="text-yellow-300 font-semibold tracking-wide mb-6">
+          <p className="text-green-700 font-semibold tracking-wide mb-6">
             Expert in financial planning, analysis, and educating clients.
             <br />
             VSP FinsServ | 12+ years of experience in the financial sector.

@@ -54,7 +54,7 @@ const App = () => {
         <Route path='retirementcalc' element={<RetirementCalculator/>}/>
         <Route path='childeducationcalc' element={<ChildEducationCalculator/>}/>
         <Route path='financial-planning' element={<FinancialPlanning/>}/>
-        <Route path='premium' element={<PayPremium/>}/>
+        {/* <Route path='premium' element={<PayPremium/>}/> */}
         <Route path='taxplan' element={<TaxPlanning/>}/>
         <Route path='elsscalculator' element={<ElssCalculator/>}/>
         <Route path='risk-management' element={<RiskManagement/>}/>
