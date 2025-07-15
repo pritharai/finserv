@@ -76,7 +76,7 @@ const Contact = () => {
               <div>
                 <h4 className="text-lg font-semibold text-gray-800">Address</h4>
                 <p className="text-gray-600">
-                  Dhandhra Road, Ludhiana <br /> Pin 141113, Punjab
+                  Urban Estate, Phase-2, Dugri, Ludhiana <br /> Pin 141013, Punjab
                 </p>
               </div>
             </div>
