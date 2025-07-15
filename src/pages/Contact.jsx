@@ -25,22 +25,31 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus({ loading: true, success: false, error: false });
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setStatus({ loading: true, success: false, error: false });
 
-    try {
-      await addDoc(collection(db, "contactMessages"), {
-        ...formData,
-        createdAt: Timestamp.now(),
-      });
+  try {
+    const res = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
       setFormData({ name: "", email: "", message: "" });
       setStatus({ loading: false, success: true, error: false });
-    } catch (err) {
-      console.error("Error submitting message:", err);
-      setStatus({ loading: false, success: false, error: true });
+    } else {
+      throw new Error(data.error);
     }
-  };
+  } catch (err) {
+    console.error("Submission error:", err);
+    setStatus({ loading: false, success: false, error: true });
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-gray-50 px-6 py-5">
@@ -85,8 +94,7 @@ const Contact = () => {
           {/* Contact Form */}
           <form
             className="space-y-6"
-            action="https://formsubmit.co/vspfinserv@gmail.com"
-            method="POST"
+            onSubmit={handleSubmit}
             data-aos="fade-left"
           >
             <input type="hidden" name="_captcha" value="false" />
@@ -187,14 +195,15 @@ const Contact = () => {
         data-aos-delay="300"
       >
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6198.326041810817!2d75.8302652414796!3d30.867447757275155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a82429dce895d%3A0x6c203538daf5e092!2sPhase%202%2C%20Urban%20Estate%20Dugri%2C%20Ludhiana%2C%20Punjab%20141003!5e1!3m2!1sen!2sin!4v1752578348595!5m2!1sen!2sin"
-          width="600"
-          height="450"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6198.326041810817!2d75.8302652414796!3d30.867447757275155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a82429dce895d%3A0x6c203538daf5e092!2sPhase%202%2C%20Urban%20Estate%20Dugri%2C%20Ludhiana%2C%20Punjab%20141003!5e1!3m2!1sen!2sin!4v1752578348595!5m2!1sen!2sin"
+  width="600"
+  height="450"
+  style={{ border: 0 }} // ✅ Correct
+  allowFullScreen // ✅ Correct
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade" // ✅ Correct
+></iframe>
+
       </div>
     </div>
   );
