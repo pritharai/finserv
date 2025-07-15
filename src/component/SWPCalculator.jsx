@@ -16,26 +16,44 @@ ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
 const SWPCalculator = () => {
   const chartRef = useRef();
   const [name, setName] = useState("Investor");
-  const [investment, setInvestment] = useState(2500000);
-  const [withdrawal, setWithdrawal] = useState(10000);
-  const [rate, setRate] = useState(8);
-  const [years, setYears] = useState(15);
-  const [startAfter, setStartAfter] = useState(0);
-  const [growth, setGrowth] = useState(0);
+  const [investment, setInvestment] = useState("");
+  const [withdrawal, setWithdrawal] = useState("");
+  const [rate, setRate] = useState("");
+  const [years, setYears] = useState("");
+  const [startAfter, setStartAfter] = useState("");
+  const [growth, setGrowth] = useState("");
   const [showGrowth, setShowGrowth] = useState(false);
+  const [errors, setErrors] = useState({});
 
-  const months = years * 12;
-  const swpStart = startAfter * 12;
+  const handleNumericChange = (setter, field) => (e) => {
+    const value = e.target.value;
+    if (/^\d*\.?\d*$/.test(value) || value === "") {
+      setter(value);
+      setErrors((prev) => ({ ...prev, [field]: false }));
+    } else {
+      setErrors((prev) => ({ ...prev, [field]: true }));
+    }
+  };
 
-  let balance = investment;
+  const investmentAmt = parseFloat(investment) || 0;
+  const withdrawalAmt = parseFloat(withdrawal) || 0;
+  const ratePercent = parseFloat(rate) || 0;
+  const durationYears = parseFloat(years) || 0;
+  const startSWPAfterYears = parseFloat(startAfter) || 0;
+  const growthPercent = parseFloat(growth) || 0;
+
+  const months = durationYears * 12;
+  const swpStart = startSWPAfterYears * 12;
+
+  let balance = investmentAmt;
   let totalWithdrawn = 0;
   let withdrawals = 0;
-  let swpAmount = withdrawal;
+  let swpAmount = withdrawalAmt;
   const details = [];
   const balanceData = [];
 
   for (let i = 1; i <= months; i++) {
-    const interest = balance * (rate / 100) / 12;
+    const interest = balance * (ratePercent / 100) / 12;
     balance += interest;
 
     if (i > swpStart) {
@@ -43,7 +61,7 @@ const SWPCalculator = () => {
       totalWithdrawn += swpAmount;
       withdrawals++;
       if (showGrowth && i % 12 === 0) {
-        swpAmount *= 1 + growth / 100;
+        swpAmount *= 1 + growthPercent / 100;
       }
     }
 
@@ -60,101 +78,94 @@ const SWPCalculator = () => {
   }
 
   const downloadPDF = async () => {
-  const chartCanvas = chartRef.current.canvas;
-  const chartImage = await html2canvas(chartCanvas).then((canvas) =>
-    canvas.toDataURL("image/png")
-  );
+    const chartCanvas = chartRef.current;
+    const chartImage = await html2canvas(chartCanvas).then((canvas) =>
+      canvas.toDataURL("image/png")
+    );
 
-  const logo = await new Promise((resolve) => {
-    const img = new Image();
-    img.src = "/logo1.png"; // must be in public/
-    img.onload = () => resolve(img);
-  });
+    const logo = await new Promise((resolve) => {
+      const img = new Image();
+      img.src = "/logo1.png";
+      img.onload = () => resolve(img);
+    });
 
-  const doc = new jsPDF();
+    const doc = new jsPDF();
 
-  // Header Brand Color Bar
-  doc.setFillColor(0, 102, 204); // blue (change to your brand)
-  doc.rect(0, 0, 210, 20, "F"); // full width bar
+    doc.setFillColor(0, 102, 204);
+    doc.rect(0, 0, 210, 20, "F");
 
-  // Logo
-  doc.addImage(logo, "PNG", 14, 3, 20, 17); // x, y, width, height
+    doc.addImage(logo, "PNG", 14, 3, 20, 17);
 
-  // Title
-  doc.setFontSize(16);
-  doc.setTextColor(255, 255, 255);
-  doc.text("VSP FinsServ - SWP Report", 40, 15);
+    doc.setFontSize(16);
+    doc.setTextColor(255, 255, 255);
+    doc.text("VSP FinsServ - SWP Report", 40, 15);
 
-  // Reset font and position
-  doc.setTextColor(0, 0, 0);
-  doc.setFontSize(12);
-  doc.setFont("courier", "normal");
-  let y = 30;
+    doc.setTextColor(0, 0, 0);
+    doc.setFontSize(12);
+    doc.setFont("courier", "normal");
 
-  const labelX = 14;
-  const valueX = 80;
+    let y = 30;
+    const labelX = 14;
+    const valueX = 80;
 
-  doc.text("Client:", labelX, y);
-doc.text(name, valueX, y);
-y += 8;
+    doc.text("Client:", labelX, y);
+    doc.text(name, valueX, y);
+    y += 8;
 
-doc.text("Initial Investment:", labelX, y);
-doc.text(`₹${investment.toLocaleString()}`, valueX, y);
-y += 8;
+    doc.text("Initial Investment:", labelX, y);
+    doc.text(`₹${investmentAmt.toLocaleString()}`, valueX, y);
+    y += 8;
 
-doc.text("Monthly Withdrawal:", labelX, y);
-doc.text(`₹${withdrawal.toLocaleString()}`, valueX, y);
-y += 8;
+    doc.text("Monthly Withdrawal:", labelX, y);
+    doc.text(`₹${withdrawalAmt.toLocaleString()}`, valueX, y);
+    y += 8;
 
-doc.text("Expected Return:", labelX, y);
-doc.text(`${rate}%`, valueX, y);
-y += 8;
+    doc.text("Expected Return:", labelX, y);
+    doc.text(`${ratePercent}%`, valueX, y);
+    y += 8;
 
-doc.text("Duration:", labelX, y);
-doc.text(`${years} Years`, valueX, y);
-y += 8;
+    doc.text("Duration:", labelX, y);
+    doc.text(`${durationYears} Years`, valueX, y);
+    y += 8;
 
-doc.text("Total Withdrawn:", labelX, y);
-doc.text(`₹${totalWithdrawn.toLocaleString()}`, valueX, y);
-y += 8;
+    doc.text("Total Withdrawn:", labelX, y);
+    doc.text(`₹${totalWithdrawn.toLocaleString()}`, valueX, y);
+    y += 8;
 
-doc.text("End Balance:", labelX, y);
-doc.text(`₹${balance.toLocaleString()}`, valueX, y);
-y += 8;
+    doc.text("End Balance:", labelX, y);
+    doc.text(`₹${balance.toLocaleString()}`, valueX, y);
+    y += 8;
 
-doc.text("Installments:", labelX, y);
-doc.text(`${withdrawals}`, valueX, y);
-y += 8;
+    doc.text("Installments:", labelX, y);
+    doc.text(`${withdrawals}`, valueX, y);
+    y += 8;
 
-doc.text("Growth Rate:", labelX, y);
-doc.text(showGrowth ? `${growth}%` : "None", valueX, y);
-y += 10;
+    doc.text("Growth Rate:", labelX, y);
+    doc.text(showGrowth ? `${growthPercent}%` : "None", valueX, y);
+    y += 10;
 
+    doc.addImage(chartImage, "PNG", 14, y, 180, 60);
+    y += 70;
 
-  doc.addImage(chartImage, "PNG", 14, y, 180, 60);
-  y += 70;
+    autoTable(doc, {
+      startY: y,
+      head: [["Year", "Month", "Withdrawal", "Interest", "Balance"]],
+      body: details.slice(0, 40),
+      theme: "striped",
+      styles: { fontSize: 8 },
+      headStyles: { fillColor: [0, 102, 204] },
+    });
 
-  autoTable(doc, {
-    startY: y,
-    head: [["Year", "Month", "Withdrawal", "Interest", "Balance"]],
-    body: details.slice(0, 40),
-    theme: "striped",
-    styles: { fontSize: 8 },
-    headStyles: { fillColor: [0, 102, 204] }, // blue brand color
-  });
+    doc.setFontSize(10);
+    doc.setTextColor(150);
+    doc.text(
+      "Generated by VSP Finserv · www.vspfinserv.in",
+      14,
+      doc.internal.pageSize.height - 10
+    );
 
-  // Footer
-  doc.setFontSize(10);
-  doc.setTextColor(150);
-  doc.text(
-    "Generated by VSP Finserv · www.vspfinserv.in",
-    14,
-    doc.internal.pageSize.height - 10
-  );
-
-  doc.save(`${name.replace(/\s+/g, "_")}_SWP_Report.pdf`);
-};
-
+    doc.save(`${name.replace(/\s+/g, "_")}_SWP_Report.pdf`);
+  };
 
   const chartData = {
     labels: balanceData.map((_, i) => `M${i + 1}`),
@@ -183,144 +194,103 @@ y += 10;
     },
   };
 
+  const isAnyFieldInvalid =
+    !investment ||
+    !withdrawal ||
+    !rate ||
+    !years ||
+    !startAfter ||
+    (showGrowth && !growth) ||
+    Object.values(errors).some((e) => e);
+
   return (
     <div className="max-w-6xl mx-auto p-6 md:p-10 bg-white rounded-xl shadow-lg m-10" data-aos="fade-up">
-  <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
-    SWP Calculator
-  </h2>
+      <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center">
+        SWP Calculator
+      </h2>
 
-  {/* Input Form */}
-  <div className="grid md:grid-cols-2 gap-8 mb-10">
-    {/* Left Side: Form */}
-    <div className="space-y-5">
-      <div>
-        <label className="block text-sm font-semibold text-gray-600 mb-1">
-          Your Name
-        </label>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="e.g. Anjali Mehta"
-        />
-      </div>
+      <div className="grid md:grid-cols-2 gap-8 mb-10">
+        <div className="space-y-5">
+          <div>
+            <label className="block text-sm font-semibold text-gray-600 mb-1">Your Name</label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="e.g. Anjali Mehta"
+              className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
 
-      <div>
-        <label className="block text-sm font-semibold text-gray-600 mb-1">
-          Investment Amount (₹)
-        </label>
-        <input
-          type="number"
-          value={investment}
-          onChange={(e) => setInvestment(+e.target.value)}
-          className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
+          {[
+            { label: "Investment Amount (₹)", state: investment, setter: setInvestment, key: "investment" },
+            { label: "Monthly Withdrawal (₹)", state: withdrawal, setter: setWithdrawal, key: "withdrawal" },
+            { label: "Expected Annual Return (%)", state: rate, setter: setRate, key: "rate" },
+            { label: "Investment Duration (Years)", state: years, setter: setYears, key: "years" },
+            { label: "Start SWP After (Years)", state: startAfter, setter: setStartAfter, key: "startAfter" },
+          ].map(({ label, state, setter, key }) => (
+            <div key={key}>
+              <label className="block text-sm font-semibold text-gray-600 mb-1">{label}</label>
+              <input
+                type="text"
+                value={state}
+                onChange={handleNumericChange(setter, key)}
+                placeholder={`e.g. ${key === "rate" ? "8" : key === "years" ? "15" : "10000"}`}
+                className={`w-full border ${errors[key] ? "border-red-500" : "border-gray-300"} rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500`}
+              />
+              {errors[key] && <p className="text-sm text-red-600 mt-1">Please enter a valid number.</p>}
+            </div>
+          ))}
 
-      <div>
-        <label className="block text-sm font-semibold text-gray-600 mb-1">
-          Monthly Withdrawal (₹)
-        </label>
-        <input
-          type="number"
-          value={withdrawal}
-          onChange={(e) => setWithdrawal(+e.target.value)}
-          className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
+          <div className="flex items-center space-x-3">
+            <input
+              type="checkbox"
+              checked={showGrowth}
+              onChange={() => setShowGrowth(!showGrowth)}
+              className="h-4 w-4 text-blue-600"
+            />
+            <label className="text-sm text-gray-700">Increase withdrawal annually?</label>
+          </div>
 
-      <div>
-        <label className="block text-sm font-semibold text-gray-600 mb-1">
-          Expected Annual Return (%)
-        </label>
-        <input
-          type="number"
-          value={rate}
-          onChange={(e) => setRate(+e.target.value)}
-          className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
-
-      <div>
-        <label className="block text-sm font-semibold text-gray-600 mb-1">
-          Investment Duration (Years)
-        </label>
-        <input
-          type="number"
-          value={years}
-          onChange={(e) => setYears(+e.target.value)}
-          className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
-
-      <div>
-        <label className="block text-sm font-semibold text-gray-600 mb-1">
-          Start SWP After (Years)
-        </label>
-        <input
-          type="number"
-          value={startAfter}
-          onChange={(e) => setStartAfter(+e.target.value)}
-          className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
-
-      <div className="flex items-center space-x-3">
-        <input
-          type="checkbox"
-          checked={showGrowth}
-          onChange={() => setShowGrowth(!showGrowth)}
-          className="h-4 w-4 text-blue-600"
-        />
-        <label className="text-sm text-gray-700">
-          Increase withdrawal annually?
-        </label>
-      </div>
-
-      {showGrowth && (
-        <div>
-          <label className="block text-sm font-semibold text-gray-600 mb-1">
-            Annual Withdrawal Growth (%)
-          </label>
-          <input
-            type="number"
-            value={growth}
-            onChange={(e) => setGrowth(+e.target.value)}
-            className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
-          />
+          {showGrowth && (
+            <div>
+              <label className="block text-sm font-semibold text-gray-600 mb-1">
+                Annual Withdrawal Growth (%)
+              </label>
+              <input
+                type="text"
+                value={growth}
+                onChange={handleNumericChange(setGrowth, "growth")}
+                placeholder="e.g. 5"
+                className={`w-full border ${errors.growth ? "border-red-500" : "border-gray-300"} rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500`}
+              />
+              {errors.growth && <p className="text-sm text-red-600 mt-1">Please enter a valid number.</p>}
+            </div>
+          )}
         </div>
-      )}
+
+        <div className="bg-blue-50 p-6 rounded-lg border shadow space-y-4">
+          <h3 className="text-xl font-semibold text-blue-800">Summary</h3>
+          <p className="text-gray-700"><strong>End Value:</strong> ₹{balance.toFixed(0)}</p>
+          <p className="text-gray-700"><strong>Total Withdrawn:</strong> ₹{totalWithdrawn.toFixed(0)}</p>
+          <p className="text-gray-700"><strong>Installments:</strong> {withdrawals}</p>
+          <button
+            className={`w-full mt-4 ${isAnyFieldInvalid ? "bg-gray-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"} text-white py-2 rounded-md font-semibold transition`}
+            disabled={isAnyFieldInvalid}
+            onClick={downloadPDF}
+          >
+            Download PDF Report
+          </button>
+        </div>
+      </div>
+
+      <div className="bg-white p-4 border rounded shadow-sm">
+        <h4 className="text-lg font-semibold mb-4 text-gray-700">Growth Chart</h4>
+        <div ref={chartRef}>
+          <Line data={chartData} options={chartOptions} />
+        </div>
+      </div>
     </div>
-
-    {/* Right Side: Result Box */}
-    <div className="bg-blue-50 p-6 rounded-lg border shadow space-y-4">
-      <h3 className="text-xl font-semibold text-blue-800">Summary</h3>
-      <p className="text-gray-700">
-        <strong>End Value:</strong> ₹{balance.toFixed(0)}
-      </p>
-      <p className="text-gray-700">
-        <strong>Total Withdrawn:</strong> ₹{totalWithdrawn.toFixed(0)}
-      </p>
-      <p className="text-gray-700">
-        <strong>Installments:</strong> {withdrawals}
-      </p>
-      <button
-        className="w-full mt-4 bg-blue-600 text-white py-2 rounded-md font-semibold hover:bg-blue-700 transition"
-        onClick={downloadPDF}
-      >
-        Download PDF Report
-      </button>
-    </div>
-  </div>
-
-  {/* Chart Section */}
-  <div className="bg-white p-4 border rounded shadow-sm">
-    <h4 className="text-lg font-semibold mb-4 text-gray-700">Growth Chart</h4>
-    <Line ref={chartRef} data={chartData} options={chartOptions} />
-  </div>
-</div>
-
   );
 };
 
