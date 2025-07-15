@@ -96,6 +96,11 @@ const onlineForms = [
 
 const offlineForms = [
   {
+    name: "ITI CAF",
+    logo: itiLogo,
+    file: "/forms/ITI.pdf",
+  },
+  {
     name: "Axis CAF",
     logo: axis,
     file: "/forms/Axis_SIP.pdf", // Place in public/forms/
@@ -207,10 +212,6 @@ const offlineForms = [
     name: "Investwell CAF",
     logo: investwell,
     file: "/forms/Investwell.pdf",
-  },{
-    name: "ITI CAF",
-    logo: itiLogo,
-    file: "/forms/ITI.pdf",
   },
   // Add more...
 ];

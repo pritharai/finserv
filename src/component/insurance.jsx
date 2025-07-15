@@ -136,7 +136,7 @@ It's like a financial safety net — you might not need it every day, but when l
           <div className="space-x-4 space-y-3">
             
             <a
-  href="https://wa.me/919463984957?text=I%20need%20help%20choosing%20a%20mutual%20fund"
+  href="https://wa.me/919463984957?text=Hello%20VSP%20FinsServ%20I%20need%20help%20choosing%20a%20insurance%20policy"
   target="_blank"
   rel="noopener noreferrer"
   className="inline-flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"

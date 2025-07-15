@@ -92,7 +92,7 @@ const RiskManagement = () => {
           Book a free consultation to assess your current financial risks and get a customized protection strategy.
         </p>
         <a
-                    href="https://wa.me/919463984957?text=Hi%20I%20need%20help%20paying%20my%20insurance%20premium"
+                    href="https://wa.me/919463984957?text=Hello%20VSP%20FinsServ%20I%20need%20help%20managing%20my%20financial%20risks"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-white text-green-400 px-6 py-2 rounded-md transition"

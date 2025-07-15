@@ -37,7 +37,7 @@ const Header = () => {
       ))}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-green-300 opacity-20 z-20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-300 opacity-30 z-20" />
 
       {/* Text Content */}
       <div className="absolute inset-0 z-30 flex flex-col justify-center items-start mx-16 text-white">

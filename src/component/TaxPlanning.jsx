@@ -117,7 +117,7 @@ const TaxPlanning = () => {
               Calculate Your Tax Plans
             </a>
             <a
-              href="https://wa.me/919463984957?text=I%20need%20help%20choosing%20a%20mutual%20fund"
+              href="https://wa.me/919463984957?text=Hello%20VSP%20FinsServ%20I%20need%20help%20planning%20my%20tax%20savings"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-green-600 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
