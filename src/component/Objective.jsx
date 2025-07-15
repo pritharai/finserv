@@ -45,7 +45,7 @@ const Objective = () => {
         </div>
 
         {/* Objective */}
-        <div className="bg-yellow-400 text-white rounded-lg p-6 shadow hover:shadow-lg transition-all duration-300">
+        <div className="bg-yellow-400 text-gray-800 rounded-lg p-6 shadow hover:shadow-lg transition-all duration-300">
           <div className="flex items-center justify-center text-white text-3xl mb-4">
             <FaBullhorn />
           </div>

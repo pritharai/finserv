@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import salesman from "../assets/Salesman2.png";
+import salesman from "../assets/Salesman3.png";
 import { FaCheckCircle } from "react-icons/fa";
 
 const points = [
@@ -92,12 +92,14 @@ const ChooseUsCard = () => {
         </div>
 
         {/* Image */}
-        <div className="hidden lg:flex flex-1 justify-center items-center">
+        <div className="hidden lg:flex flex-1 relative justify-center items-center">
           <img
             
             src={salesman}
             alt="Why Choose Us"
+            className="z-10 relative"
           />
+          <div className="absolute bottom-0 w-40 h-4 bg-black/30 rounded-full blur-md" />
         </div>
       </div>
     </section>

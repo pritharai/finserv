@@ -79,28 +79,28 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {navOpen && (
                 <div className="md:hidden px-4 pb-4 space-y-3 bg-blue-800 text-white text-lg">
-                    <Link to="/" className="block hover:text-yellow-300">Home</Link>
-                    <Link to="/aboutus" className="block hover:text-yellow-300">About</Link>
-                    <Link to="/contact" className="block hover:text-yellow-300">Contact</Link>
+                    <Link to="/" className="font-semibold block hover:text-yellow-300">Home</Link>
+                    <Link to="/aboutus" className="font-semibold block hover:text-yellow-300">About</Link>
+                    <Link to="/contact" className="font-semibold block hover:text-yellow-300">Contact</Link>
 
                     {/* Mobile Services Dropdown (always expanded on mobile) */}
                     <div>
                         <p className="font-semibold mt-2">Services</p>
-                        <ul className="ml-4 space-y-2">
-                            <li><Link to="/mutual-funds" className="block px-4 py-2 hover:bg-gray-100">Mutual Funds</Link></li>
-                            <li><Link to="/insurance" className="block px-4 py-2 hover:bg-gray-100">Insurance</Link></li>
+                        <ul className="ml-4 space-y-2 py-1.5">
+                            <li><Link to="/mutual-funds" className="block hover:text-yellow-300">Mutual Funds</Link></li>
+                            <li><Link to="/insurance" className="block hover:text-yellow-300">Insurance</Link></li>
                             <li><Link to="/financial-planning" className="block hover:text-yellow-300">Financial Planning</Link></li>
                             <li><Link to="/taxplan" className="block hover:text-yellow-300">Tax Planning</Link></li>
                             <li><Link to="/risk-management" className="block hover:text-yellow-300">Risk Management</Link></li>
-                            <li><Link to="/premium" className="block px-4 py-2 hover:bg-gray-100">Pay Premium Online</Link></li>
+                            <li><Link to="/premium" className="block hover:text-yellow-300">Pay Premium Online</Link></li>
                            
                             {/* <li><Link to="/nri-services" className="block hover:text-yellow-300">NRI Services</Link></li> */}
                         </ul>
                     </div>
 
-                    <Link to="/calculator" className="block hover:text-yellow-300">Calculator</Link>
-                    <Link to="/mutual-fund-forms" className="hover:text-yellow-300">Common Application Forms</Link>
-                    <Link to="/faqs" className="block hover:text-yellow-300">FAQs</Link>
+                    <Link to="/calculator" className="font-semibold block hover:text-yellow-300">Calculator</Link>
+                    <Link to="/mutual-fund-forms" className="font-semibold block hover:text-yellow-300">Common Application Forms</Link>
+                    <Link to="/faqs" className="font-semibold block hover:text-yellow-300">FAQs</Link>
 
                 </div>
             )}

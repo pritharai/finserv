@@ -101,32 +101,34 @@ const FinancialPlanning = () => {
 </div>
       </div> */}
 
-      <section className="bg-gradient-to-r from-blue-600 to-teal-500 py-16">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">
-            📞 Ready to Plan Your Future?
-          </h2>
-          <p className="mb-6 text-lg">
-            Book a free consultation and get personalized financial guidance tailored to your life goals.
-          </p>
-          <div className="space-x-4 space-y-3">
-            <a
-              href="/mutual-fund-forms"
-              className="inline-block bg-white text-blue-700 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
-            >
-              Explore Financial Calculators
-            </a>
-            <a
-              href="https://wa.me/919463984957?text=I%20need%20help%20choosing%20a%20mutual%20fund"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-white text-green-600 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
-            >
-              Book a Free Consultation
-            </a>
-          </div>
-        </div>
-      </section>
+     <section className="bg-gradient-to-r from-blue-600 to-green-500 py-16">
+  <div className="max-w-4xl mx-auto text-center text-white px-4">
+    <h2 className="text-3xl font-bold mb-4">
+      📞 Ready to Plan Your Future?
+    </h2>
+    <p className="mb-6 text-lg">
+      Book a free consultation and get personalized financial guidance tailored to your life goals.
+    </p>
+
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/mutual-fund-forms"
+        className="w-full sm:w-64 text-center bg-white text-blue-700 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
+      >
+      Explore Financial Calculators
+      </a>
+      <a
+        href="https://wa.me/919463984957?text=I%20need%20help%20choosing%20a%20mutual%20fund"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full sm:w-64 text-center bg-white text-green-600 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
+      >
+      Book a Free Consultation
+      </a>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

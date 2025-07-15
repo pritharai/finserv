@@ -28,25 +28,31 @@ const MutualFunds = () => {
     <div className="min-h-screen bg-gray-50">
 
       {/* 1. Hero Section */}
-      <section className="bg-gradient-to-r from-blue-100 to-green-100 py-16 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div data-aos="fade-right">
-            <h1 className="text-5xl font-bold text-blue-800 mb-4">
-              Invest Smart. Build Wealth.
-            </h1>
-            <p className="text-gray-700 text-lg">
-             As a trusted leader in wealth management, VSP FinsServ provides premium mutual fund schemes designed for optimal returns
-            </p>
-          </div>
-          <div data-aos="fade-left">
-            <img
-              src={mutualImg}
-              alt="Mutual Funds"
-              className="w-full max-w-lg ml-30"
-            />
-          </div>
-        </div>
-      </section>
+      <section className="bg-gradient-to-r from-blue-100 to-green-100 py-16 px-4 sm:px-6">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    
+    {/* Text Section */}
+    <div data-aos="fade-right" className="text-center md:text-left px-2">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-800 mb-4 leading-tight">
+        Invest Smart. Build Wealth.
+      </h1>
+      <p className="text-gray-700 text-base sm:text-lg">
+        As a trusted leader in wealth management, VSP FinsServ provides premium mutual fund schemes designed for optimal returns.
+      </p>
+    </div>
+
+    {/* Image Section */}
+    <div data-aos="fade-left" className="flex justify-center md:justify-end">
+      <img
+        src={mutualImg}
+        alt="Mutual Funds"
+        className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+      />
+    </div>
+    
+  </div>
+</section>
+
 
       {/* 2. What is Mutual Fund */}
       <section className="max-w-6xl mx-auto px-6 py-16" data-aos="fade-up">
@@ -134,22 +140,23 @@ const MutualFunds = () => {
           <p className="mb-6 text-lg">
             Let us help you make the right investment choice based on your goals.
           </p>
-          <div className="space-x-4 space-y-3">
-            <a
-              href="/mutual-fund-forms"
-              className="inline-block bg-white text-blue-700 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
-            >
-              Explore Mutual Fund Options
-            </a>
-            <a
-              href="https://wa.me/919463984957?text=I%20need%20help%20choosing%20a%20mutual%20fund"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-white text-green-600 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
-            >
-              Book a Free Consultation
-            </a>
-          </div>
+          <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 justify-center">
+  <a
+    href="/mutual-fund-forms"
+    className="w-full sm:w-auto text-center bg-white text-blue-700 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
+  >
+    Explore Mutual Fund Options
+  </a>
+  <a
+    href="https://wa.me/919463984957?text=I%20need%20help%20choosing%20a%20mutual%20fund"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full sm:w-auto text-center bg-white text-green-600 px-6 py-3 rounded-md font-semibold shadow hover:bg-gray-100 transition"
+  >
+    Book a Free Consultation
+  </a>
+</div>
+
         </div>
       </section>
     </div>

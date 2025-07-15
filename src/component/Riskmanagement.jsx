@@ -75,7 +75,7 @@ const RiskManagement = () => {
               data-aos="fade-up"
               data-aos-delay={i * 100}
             >
-              <div className="mb-2 ml-24">{item.icon}</div>
+              <div className="mb-2 flex items-center justify-center">{item.icon}</div>
               <h4 className="font-semibold text-lg text-gray-800 mb-2">{item.title}</h4>
               <p className="text-gray-600 text-sm">{item.desc}</p>
             </div>
@@ -95,7 +95,7 @@ const RiskManagement = () => {
                     href="https://wa.me/919463984957?text=Hi%20I%20need%20help%20paying%20my%20insurance%20premium"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-md transition"
+                    className="inline-flex items-center gap-2 bg-white text-green-400 px-6 py-2 rounded-md transition"
                   >
                     <FaWhatsapp /> Chat on WhatsApp
                   </a>

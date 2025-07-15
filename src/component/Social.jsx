@@ -13,9 +13,9 @@ const Social = () => {
       <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="block bg-pink-500 p-2 rounded-l hover:bg-pink-600 text-white">
         <FaInstagram size={18}/>
       </a>
-      <a href="https://wa.me/919463984957" target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-2 rounded-l hover:bg-green-600 text-white">
+      {/* <a href="https://wa.me/919463984957" target="_blank" rel="noopener noreferrer" className="block bg-green-500 p-2 rounded-l hover:bg-green-600 text-white">
         <FaWhatsapp size={18}/>
-      </a>
+      </a> */}
       <a href="mailto:vspfinserv@email.com" className="block bg-red-500 p-2 rounded-l hover:bg-red-600 text-white">
         <FaEnvelope size={18}/>
       </a>
