@@ -40,7 +40,7 @@ const Header = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-green-300 opacity-20 z-20" />
 
       {/* Text Content */}
-      <div className="absolute inset-0 z-30 flex flex-col justify-center items-start mx-16 text-green-700">
+      <div className="absolute inset-0 z-30 flex flex-col justify-center items-start mx-16 text-white">
         <h1 className="text-7xl font-bold mb-4 px-5">VSP FinsServ</h1>
         <p className="text-2xl mb-6 max-w-[500px] px-5">
           Empowering your financial future with trust and transparency.
@@ -53,7 +53,7 @@ const Header = () => {
           <Button
             variant="outlined"
             color="inherit"
-            sx={{ borderColor: "green", color: "green" }}
+            sx={{ borderColor: "white", color: "white" }}
             onClick={() => navigate("/partners")}
           >
             Our Partners

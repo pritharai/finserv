@@ -16,8 +16,8 @@ import nivabupa from "../assets/logos/niva-bupa.png";
 import hdfcergo from "../assets/logos/HDFC-ERGO.png";
 import manipal from "../assets/logos/manipal-cigna.png";
 import bajajall from "../assets/logos/Bajaj-Allianz.png";
-import tnia from "../assets/logos/TNIA.png"
-import uti from "../assets/logos/uti.webp"
+import tnia from "../assets/logos/TNIA.png";
+import uti from "../assets/logos/uti.webp";
 import bajajfin from "../assets/logos/bajaj-finserv.webp";
 import canara from "../assets/logos/canara.png";
 import care from "../assets/logos/care.jpg";
@@ -26,7 +26,7 @@ import future from "../assets/logos/future.png";
 import go from "../assets/logos/go.png";
 import hsbc from "../assets/logos/hsbc.avif";
 import icici from "../assets/logos/icici.jpg";
-import invesco from "../assets/logos/invesco.jpg"
+import invesco from "../assets/logos/invesco.jpg";
 import investwell from "../assets/logos/investwell.png";
 import liberty from "../assets/logos/liberty.jpg";
 import mahindra from "../assets/logos/mahindra.png";
@@ -128,13 +128,25 @@ const partners = [
     type: "Investment",
   },
   {
+    name: "Investwell Mutual Fund",
+    logo: investwell,
+    link: "https://www.axismf.com/",
+    type: "Investment",
+  },
+  {
+    name: "DSP Mutual Fund",
+    logo: dsp,
+    link: "https://www.axismf.com/",
+    type: "Investment",
+  },
+  {
     name: "UTI Mutual Fund",
     logo: uti,
     link: "https://www.axismf.com/",
     type: "Investment",
   },
   {
-    name: "Sundram Mutual Fund",
+    name: "Royal Sundram Mutual Fund",
     logo: sundram,
     link: "https://www.axismf.com/",
     type: "Investment",
