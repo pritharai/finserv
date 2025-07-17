@@ -7,7 +7,9 @@ import { useEffect } from "react";
 // Images
 import icici from "../assets/logos/icici.jpg";
 import liberty from "../assets/logos/liberty.jpg"
-import hdfc from "../assets/logos/hdfc-ergo.png";
+// import hdfc from "../assets/logos/hdfc-ergo.png";
+import hdfcErgo from "../assets/logos/hdfc-ergo.png";
+
 import go from "../assets/logos/go.png"
 import insuranceImg from "../assets/insurance.jpg"
 import niva from "../assets/logos/niva-bupa.png"
@@ -21,7 +23,7 @@ import future from "../assets/logos/future.png"
 const insuranceData = {
   Health: [
     { name: "Niva Bupa Health Insurance Co. Ltd", logo: niva, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
-    { name: "HDFC ERGO General Insurance Company Limited", logo: hdfc, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "HDFC ERGO General Insurance Company Limited", logo: hdfcErgo, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
     { name: "Care Health Insurance Ltd", logo: care, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
     { name: "Star Health and Allied Insurance Co Ltd", logo: star, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
     { name: "The New India Assurance Co Ltd", logo: tnia, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
@@ -31,7 +33,7 @@ const insuranceData = {
     { name: "The New India Assurance Co Ltd", logo: tnia, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
     { name: "Go Digit General Insurance Limited", logo: go, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
     { name: "ICICI Lombard General Insurance", logo: icici, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
-    { name: "HDFC ERGO General Insurance Company Limited", logo: hdfc, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
+    { name: "HDFC ERGO General Insurance Company Limited", logo: hdfcErgo, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
     { name: "Liberty General Insurance Limited", logo: liberty, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
     { name: "Bajaj Allianz General Insurance Limited", logo: bajajall, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },
     { name: "Future Generali India Insurance Limited", logo: future, link: "https://www.hdfclife.com/health-insurance/pay-premium-online" },

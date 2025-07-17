@@ -4,7 +4,8 @@ import { FaWhatsapp, FaHeartbeat, FaCar } from "react-icons/fa";
 // Health & Motor Insurance Logos
 import icici from "../assets/logos/icici.jpg";
 import liberty from "../assets/logos/liberty.jpg"
-import hdfc from "../assets/logos/hdfc-ergo.png";
+// import hdfcErgo from "../assets/logos/hdfc-ergo.png";
+import hdfcErgo from "../assets/logos/hdfc-ergo.png";
 import go from "../assets/logos/go.png"
 // import insuranceImg from "../assets/insurance.jpg"
 import niva from "../assets/logos/niva-bupa.png"
@@ -62,7 +63,7 @@ const motorPartners = [
   {
     name: "HDFC Ergo General",
     url: "https://paytm.com/insurance-premium-payment/hdfc-ergo-general-insurance-motor",
-    logo: hdfc,
+    logo: hdfcErgo,
   },
   { name: "Go Digit General Insurance Limited", logo: go, url: "https://paytm.com/insurance-premium-payment/go-digit-insurance" },
   { name: "ICICI Lombard General Insurance", logo: icici, url: "https://paytm.com/insurance-premium-payment/icici-lombard-general-insurance-motor" },
