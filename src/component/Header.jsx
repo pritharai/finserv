@@ -37,10 +37,10 @@ const Header = () => {
       ))}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-300 opacity-30 z-20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-green-300 opacity-30 z-20" />
 
       {/* Text Content */}
-      <div className="absolute inset-0 z-30 flex flex-col justify-center items-start mx-16 text-white">
+      <div className="absolute inset-0 z-30 flex flex-col justify-center items-start mx-16 text-green-800">
         <h1 className="text-7xl font-bold mb-4 px-5">VSP FinsServ</h1>
         <p className="text-2xl mb-6 max-w-[500px] px-5">
           Empowering your financial future with trust and transparency.

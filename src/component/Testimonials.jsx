@@ -25,7 +25,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-gradient-to-br from-blue-200 to-green-200 py-20">
+    <section className=" py-20">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
         <p className="text-gray-600 mb-12">Real stories from people we’ve helped.</p>
