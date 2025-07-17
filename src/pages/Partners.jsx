@@ -13,7 +13,7 @@ import union from "../assets/logos/union.png";
 import sbi from "../assets/logos/sbi.jpeg";
 import axis from "../assets/logos/axis.png";
 import nivabupa from "../assets/logos/niva-bupa.png";
-import hdfcergo from "../assets/logos/HDFC-ERGO.png";
+import hdfcergo from "../assets/logos/hdfc-ergo.png";
 import manipal from "../assets/logos/manipal-cigna.png";
 import bajajall from "../assets/logos/Bajaj-Allianz.png";
 import tnia from "../assets/logos/TNIA.png";

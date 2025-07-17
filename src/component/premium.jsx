@@ -4,7 +4,7 @@ import { FaWhatsapp, FaHeartbeat, FaCar } from "react-icons/fa";
 // Health & Motor Insurance Logos
 import icici from "../assets/logos/icici.jpg";
 import liberty from "../assets/logos/liberty.jpg"
-import hdfc from "../assets/logos/HDFC-Ergo.png";
+import hdfc from "../assets/logos/hdfc-ergo.png";
 import go from "../assets/logos/go.png"
 // import insuranceImg from "../assets/insurance.jpg"
 import niva from "../assets/logos/niva-bupa.png"
