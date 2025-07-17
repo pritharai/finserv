@@ -214,6 +214,12 @@ const partners = [
     type: "General Insurance",
   },
   {
+    name: "Bajaj Finserv General Insurance",
+    logo: bajajfin,
+    link: "https://www.axismf.com/",
+    type: "General Insurance",
+  },
+  {
     name: "ICICI Lombard General Insurance",
     logo: icici,
     link: "https://www.axismf.com/",
